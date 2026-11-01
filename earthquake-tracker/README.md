@@ -2,7 +2,7 @@
 
 A real-time dashboard that pulls live earthquake data from the [USGS Earthquake Hazards Program](https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/) and visualizes it on an interactive map.
 
-**[Try the live app →](#)** *(add your Streamlit Cloud link here once deployed)*
+**[Try the live app →](https://data-analytics-portfolio-6im4jotwqda9nprm4dutwd.streamlit.app/)**
 
 ## What it does
 
