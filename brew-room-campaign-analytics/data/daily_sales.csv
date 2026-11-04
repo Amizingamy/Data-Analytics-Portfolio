@@ -1,0 +1,91 @@
+date,day_of_week,campaign_period,product,revenue,units_sold
+2023-12-01,Friday,Pre-Campaign,Regular Menu,24892,113
+2023-12-02,Saturday,Pre-Campaign,Regular Menu,22278,101
+2023-12-03,Sunday,Pre-Campaign,Regular Menu,25759,117
+2023-12-04,Monday,Pre-Campaign,Regular Menu,19354,87
+2023-12-05,Tuesday,Pre-Campaign,Regular Menu,15191,69
+2023-12-06,Wednesday,Pre-Campaign,Regular Menu,16125,73
+2023-12-07,Thursday,Pre-Campaign,Regular Menu,18184,82
+2023-12-08,Friday,Pre-Campaign,Regular Menu,23685,107
+2023-12-09,Saturday,Pre-Campaign,Regular Menu,24267,110
+2023-12-10,Sunday,Pre-Campaign,Regular Menu,22642,102
+2023-12-11,Monday,Pre-Campaign,Regular Menu,19266,87
+2023-12-12,Tuesday,Pre-Campaign,Regular Menu,19120,86
+2023-12-13,Wednesday,Campaign (Dec 13-25),Christmas Cupcake Tree,7367,41
+2023-12-13,Wednesday,Campaign (Dec 13-25),Christmas Truffles,8540,27
+2023-12-13,Wednesday,Campaign (Dec 13-25),Gifting Hampers,26441,18
+2023-12-13,Wednesday,Campaign (Dec 13-25),Hot Chocolate Board,4597,18
+2023-12-13,Wednesday,Campaign (Dec 13-25),Plum Cake,7965,18
+2023-12-13,Wednesday,Campaign (Dec 13-25),Regular Menu,4910,21
+2023-12-14,Thursday,Campaign (Dec 13-25),Christmas Cupcake Tree,5852,33
+2023-12-14,Thursday,Campaign (Dec 13-25),Christmas Truffles,7696,24
+2023-12-14,Thursday,Campaign (Dec 13-25),Gifting Hampers,29153,20
+2023-12-14,Thursday,Campaign (Dec 13-25),Hot Chocolate Board,3677,14
+2023-12-14,Thursday,Campaign (Dec 13-25),Plum Cake,11363,25
+2023-12-14,Thursday,Campaign (Dec 13-25),Regular Menu,3925,17
+2023-12-15,Friday,Campaign (Dec 13-25),Christmas Cupcake Tree,9220,51
+2023-12-15,Friday,Campaign (Dec 13-25),Christmas Truffles,15673,49
+2023-12-15,Friday,Campaign (Dec 13-25),Gifting Hampers,41838,29
+2023-12-15,Friday,Campaign (Dec 13-25),Hot Chocolate Board,6434,25
+2023-12-15,Friday,Campaign (Dec 13-25),Plum Cake,14341,32
+2023-12-15,Friday,Campaign (Dec 13-25),Regular Menu,5437,24
+2023-12-16,Saturday,Campaign (Dec 13-25),Christmas Cupcake Tree,8382,47
+2023-12-16,Saturday,Campaign (Dec 13-25),Christmas Truffles,8374,26
+2023-12-16,Saturday,Campaign (Dec 13-25),Gifting Hampers,33528,23
+2023-12-16,Saturday,Campaign (Dec 13-25),Hot Chocolate Board,6285,24
+2023-12-16,Saturday,Campaign (Dec 13-25),Plum Cake,11370,25
+2023-12-16,Saturday,Campaign (Dec 13-25),Regular Menu,5835,25
+2023-12-17,Sunday,Campaign (Dec 13-25),Christmas Cupcake Tree,9687,54
+2023-12-17,Sunday,Campaign (Dec 13-25),Christmas Truffles,11781,37
+2023-12-17,Sunday,Campaign (Dec 13-25),Gifting Hampers,47857,33
+2023-12-17,Sunday,Campaign (Dec 13-25),Hot Chocolate Board,5377,21
+2023-12-17,Sunday,Campaign (Dec 13-25),Plum Cake,14142,31
+2023-12-17,Sunday,Campaign (Dec 13-25),Regular Menu,7067,31
+2023-12-18,Monday,Campaign (Dec 13-25),Christmas Cupcake Tree,6980,39
+2023-12-18,Monday,Campaign (Dec 13-25),Christmas Truffles,9058,28
+2023-12-18,Monday,Campaign (Dec 13-25),Gifting Hampers,23944,17
+2023-12-18,Monday,Campaign (Dec 13-25),Hot Chocolate Board,4359,17
+2023-12-18,Monday,Campaign (Dec 13-25),Plum Cake,10067,22
+2023-12-18,Monday,Campaign (Dec 13-25),Regular Menu,4058,18
+2023-12-19,Tuesday,Campaign (Dec 13-25),Christmas Cupcake Tree,5131,29
+2023-12-19,Tuesday,Campaign (Dec 13-25),Christmas Truffles,6400,20
+2023-12-19,Tuesday,Campaign (Dec 13-25),Gifting Hampers,35527,25
+2023-12-19,Tuesday,Campaign (Dec 13-25),Hot Chocolate Board,3815,15
+2023-12-19,Tuesday,Campaign (Dec 13-25),Plum Cake,11320,25
+2023-12-19,Tuesday,Campaign (Dec 13-25),Regular Menu,2798,12
+2023-12-20,Wednesday,Campaign (Dec 13-25),Christmas Cupcake Tree,6053,34
+2023-12-20,Wednesday,Campaign (Dec 13-25),Christmas Truffles,8788,27
+2023-12-20,Wednesday,Campaign (Dec 13-25),Gifting Hampers,28758,20
+2023-12-20,Wednesday,Campaign (Dec 13-25),Hot Chocolate Board,4501,17
+2023-12-20,Wednesday,Campaign (Dec 13-25),Plum Cake,10205,23
+2023-12-20,Wednesday,Campaign (Dec 13-25),Regular Menu,3732,16
+2023-12-21,Thursday,Campaign (Dec 13-25),Christmas Cupcake Tree,6379,35
+2023-12-21,Thursday,Campaign (Dec 13-25),Christmas Truffles,7209,23
+2023-12-21,Thursday,Campaign (Dec 13-25),Gifting Hampers,37556,26
+2023-12-21,Thursday,Campaign (Dec 13-25),Hot Chocolate Board,3523,14
+2023-12-21,Thursday,Campaign (Dec 13-25),Plum Cake,8090,18
+2023-12-21,Thursday,Campaign (Dec 13-25),Regular Menu,4691,20
+2023-12-22,Friday,Campaign (Dec 13-25),Christmas Cupcake Tree,8105,45
+2023-12-22,Friday,Campaign (Dec 13-25),Christmas Truffles,10843,34
+2023-12-22,Friday,Campaign (Dec 13-25),Gifting Hampers,49586,34
+2023-12-22,Friday,Campaign (Dec 13-25),Hot Chocolate Board,6252,24
+2023-12-22,Friday,Campaign (Dec 13-25),Plum Cake,15030,33
+2023-12-22,Friday,Campaign (Dec 13-25),Regular Menu,5355,23
+2023-12-23,Saturday,Campaign (Dec 13-25),Christmas Cupcake Tree,9214,51
+2023-12-23,Saturday,Campaign (Dec 13-25),Christmas Truffles,11845,37
+2023-12-23,Saturday,Campaign (Dec 13-25),Gifting Hampers,51744,36
+2023-12-23,Saturday,Campaign (Dec 13-25),Hot Chocolate Board,5375,21
+2023-12-23,Saturday,Campaign (Dec 13-25),Plum Cake,16556,37
+2023-12-23,Saturday,Campaign (Dec 13-25),Regular Menu,7442,32
+2023-12-24,Sunday,Campaign (Dec 13-25),Christmas Cupcake Tree,15372,85
+2023-12-24,Sunday,Campaign (Dec 13-25),Christmas Truffles,17695,55
+2023-12-24,Sunday,Campaign (Dec 13-25),Gifting Hampers,49879,34
+2023-12-24,Sunday,Campaign (Dec 13-25),Hot Chocolate Board,9336,36
+2023-12-24,Sunday,Campaign (Dec 13-25),Plum Cake,19511,43
+2023-12-24,Sunday,Campaign (Dec 13-25),Regular Menu,7029,31
+2023-12-25,Monday,Campaign (Dec 13-25),Christmas Cupcake Tree,5631,31
+2023-12-25,Monday,Campaign (Dec 13-25),Christmas Truffles,8364,26
+2023-12-25,Monday,Campaign (Dec 13-25),Gifting Hampers,44187,30
+2023-12-25,Monday,Campaign (Dec 13-25),Hot Chocolate Board,5093,20
+2023-12-25,Monday,Campaign (Dec 13-25),Plum Cake,8838,20
+2023-12-25,Monday,Campaign (Dec 13-25),Regular Menu,4447,19
