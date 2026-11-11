@@ -9,9 +9,9 @@ Based in Chennai, India. Email: a-amisha@outlook.com
 | Project | What it shows | Tools |
 |---|---|---|
 | [Live Earthquake Tracker](earthquake-tracker/) ([live app](https://data-analytics-portfolio-6im4jotwqda9nprm4dutwd.streamlit.app/)) | Pulls a live data feed, cleans it and shows it on an interactive map with filters | Python, pandas, Plotly, Streamlit |
-| [Brew Room Christmas Campaign: Analytics](brew-room-campaign-analytics/) | A real campaign turned into a case study: revenue lift, product mix, Instagram effect and loyalty behaviour, using a simulated dataset | SQL, Python |
+| [Brew Room Christmas Campaign: Analytics](brew-room-campaign-analytics/) | A real campaign turned into a case study: revenue lift, product mix, Instagram effect and loyalty behaviour, using a simulated dataset | SQL, Python (pandas, scipy), notebook analysis |
 
-In progress: a Tableau dashboard and an Alteryx cleaning workflow for the Brew Room project.
+In progress: a Tableau dashboard and an Alteryx cleaning workflow for the Brew Room project (the Alteryx practice data and a tested Python answer key are already in the folder).
 
 ## Other work
 

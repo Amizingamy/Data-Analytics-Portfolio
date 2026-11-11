@@ -22,6 +22,10 @@ Everything else (daily revenue, product splits, member behaviour) is made up to 
 | `data/daily_sales.csv` | Revenue and units per product per day, Dec 1-25 (Dec 1-12 is the baseline before the campaign) |
 | `data/loyalty_members.csv` | 24 simulated loyalty members: tier, visits, spend, rewards redeemed, referrals |
 | `data/instagram_engagement.csv` | Daily Instagram reach, likes, saves, comments and story replies for the campaign |
+| `data/transactions.csv` | 2,421 simulated individual purchases by 282 customers. Adds up exactly to `daily_sales.csv`; customer IDs are not linked to loyalty members |
+| `analysis/campaign_lift_and_rfm.ipynb` | Python notebook: statistical test of the campaign lift (Welch t-test, Mann-Whitney, bootstrap) and RFM customer segmentation, with charts |
+| `alteryx/` | Practice kit: messy raw exports, a pandas answer key, and a build guide for cleaning them in Alteryx |
+| `generate_transactions.py` | Splits daily totals into individual purchases (run after `generate_data.py`) |
 | `sql/queries.sql` | 12 SQL queries, each answering a business question |
 | `sql/run_sql.py` | Loads the CSVs into SQLite and runs the queries |
 | `generate_data.py` | The script that creates the data (fixed seed, so it gives the same files every time) |
@@ -59,4 +63,5 @@ python3 run_sql.py --save-db   # also saves brew_room.db to open in DB Browser f
 
 ## Coming next
 
-A Tableau dashboard on this data, and an Alteryx workflow that cleans messy raw exports before the SQL step.
+- A Tableau dashboard on this data (link will be added here once published).
+- The Alteryx cleaning workflow (`.yxmd` and screenshots) in `alteryx/`.
