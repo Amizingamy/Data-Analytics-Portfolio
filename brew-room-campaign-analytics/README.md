@@ -27,6 +27,7 @@ Everything else (daily revenue, product splits, member behaviour) is made up to 
 | `alteryx/` | Practice kit: messy raw exports, a pandas answer key, and a build guide for cleaning them in Alteryx |
 | `generate_transactions.py` | Splits daily totals into individual purchases (run after `generate_data.py`) |
 | `sql/queries.sql` | 12 SQL queries, each answering a business question |
+| `sql/RESULTS.md` | Every query with its output, readable without running anything |
 | `sql/run_sql.py` | Loads the CSVs into SQLite and runs the queries |
 | `generate_data.py` | The script that creates the data (fixed seed, so it gives the same files every time) |
 
