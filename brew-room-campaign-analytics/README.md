@@ -15,6 +15,8 @@ I built it around the few real figures I am free to share:
 
 Everything else (daily revenue, product splits, member behaviour) is made up to fit those facts. Treat the findings as a demonstration of method, not as the real results of the business.
 
+**Dashboard:** [view the Tableau Public dashboard](https://public.tableau.com/views/BrewRoomChristmasCampaign/Dashboard1) (revenue by day, product mix, Instagram riddle posts, loyalty tiers).
+
 ## What is in this folder
 
 | Path | What it is |
@@ -64,5 +66,4 @@ python3 run_sql.py --save-db   # also saves brew_room.db to open in DB Browser f
 
 ## Coming next
 
-- A Tableau dashboard on this data (link will be added here once published).
 - The Alteryx cleaning workflow (`.yxmd` and screenshots) in `alteryx/`.
