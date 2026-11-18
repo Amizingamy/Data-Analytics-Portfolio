@@ -35,6 +35,7 @@ To check totals: close the editor (Home → **Close & Apply**), add a Card visua
 | What | Image |
 |---|---|
 | Raw POS export before cleaning (padded text, mixed dates, `Rs`/`INR` amounts) | ![raw](screenshots/raw_pos_bills_before_cleaning.png) |
+| `clean_transactions`: 2,421 distinct order IDs, no errors, 6 product names, applied steps on the right | ![transactions](screenshots/clean_transactions_2421_rows.png) |
 | `clean_instagram`: 13 rows after removing junk lines and the Total row | ![instagram](screenshots/clean_instagram_13_rows.png) |
 | `clean_loyalty`: 24 members, tiers fixed, flags as true/false | ![loyalty](screenshots/clean_loyalty_24_members.png) |
 | Power BI report: card shows 1280548, matching the answer key | ![report](screenshots/power_bi_report_total_1280548.png) |
