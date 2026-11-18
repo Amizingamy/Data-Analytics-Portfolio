@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Data analytics portfolio of Amisha Agarwal: SQL, Python, Tableau, Power BI and Power Query projects.">
+<meta name="description" content="Portfolio of Amisha Agarwal: marketing work and data analytics projects in SQL, Python, Tableau, Power BI and Power Query.">
 <style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>Amisha Agarwal Data Portfolio</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap">
@@ -44,6 +44,12 @@ pre{margin:0;background:var(--code);border:1px solid var(--line);border-radius:1
 table{border-collapse:collapse;width:100%;font-size:.9rem;font-variant-numeric:tabular-nums}
 th,td{text-align:left;padding:9px 14px;border-bottom:1px solid var(--line);white-space:nowrap}th{color:var(--muted);font-size:.75rem;letter-spacing:.06em;text-transform:uppercase}tr:last-child td{border-bottom:0}
 ul.skills{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}ul.skills li{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:5px 13px;font-size:.88rem;color:var(--ink2)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.card h3{font-family:var(--head);font-size:1.05rem;margin:0}.card .meta{color:var(--muted);font-size:.82rem}
+.card ul{margin:0;padding-left:18px;color:var(--ink2);font-size:.92rem;display:flex;flex-direction:column;gap:5px}
+.card .big{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.9rem;color:var(--ink2)}.card .big b{color:var(--accent);font-family:var(--head);font-size:1.2rem;margin-right:4px}
+nav.jump{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:.9rem}nav.jump a{color:var(--ink2)}
 footer{color:var(--muted);font-size:.85rem}
 </style>
 </head>
@@ -51,14 +57,15 @@ footer{color:var(--muted);font-size:.85rem}
 
 <main>
 <header>
-  <p class="label">Data analytics portfolio</p>
+  <p class="label">Portfolio</p>
   <h1 style="margin-top:10px">Amisha Agarwal</h1>
-  <p class="lead">Social media and marketing manager moving into data analytics. I turn campaign questions into SQL queries, Python analysis and dashboards. Based in Chennai.</p>
+  <p class="lead">Marketing manager (MBA, Global Marketing Management) moving into data analytics. I run campaigns, and I turn campaign questions into SQL queries, Python analysis and dashboards. Based in Chennai.</p>
   <div class="links">
     <a href="https://github.com/Amizingamy/Data-Analytics-Portfolio">GitHub: all code and notebooks</a>
     <a href="https://public.tableau.com/views/BrewRoomChristmasCampaign/Dashboard1">Interactive Tableau dashboard</a>
     <a href="https://data-analytics-portfolio-6im4jotwqda9nprm4dutwd.streamlit.app/">Live app: Earthquake Tracker</a>
   </div>
+  <nav class="jump"><a href="#cs">Data case study</a><a href="#sq">SQL</a><a href="#mk">Marketing work</a><a href="#ed">Education</a></nav>
 </header>
 
 <section class="sec" aria-labelledby="cs">
@@ -85,8 +92,39 @@ footer{color:var(--muted);font-size:.85rem}
   <div class="q" id="qbody" role="tabpanel"></div>
 </section>
 
+<section class="sec" aria-labelledby="mk">
+  <div><p class="label">Marketing work</p><h2 id="mk" style="margin-top:6px">Campaigns and sales, before the analytics</h2>
+  <p class="lead" style="font-size:1rem">The numbers below are from my own roles. The data case study above builds on the first one.</p></div>
+  <div class="cards">
+    <div class="card"><h3>The Brew Room &amp; Bread Boutique</h3><p class="meta">Head of Digital Marketing, Dec 2022 to Jun 2023</p>
+      <div class="big"><span><b>106%</b>net profit increase, festive range</span><span><b>₹5 lakh</b>from Christmas hampers</span><span><b>500 to 6,000+</b>organic views</span></div>
+      <ul><li>Built lifecycle and email campaigns for the festive product range.</li><li>Ran a Christmas Scavenger Hunt that drove the hamper sales.</li><li>Designed a content framework that raised daily retail closures by 50%, to about ₹1.5 lakh a day.</li></ul></div>
+    <div class="card"><h3>The Duchess Club, Chennai</h3><p class="meta">Marketing Consultant (freelance), 2019 to 2021 and 2022 to 2023</p>
+      <div class="big"><span><b>100+</b>brands</span><span><b>93%</b>stall-owner satisfaction</span></div>
+      <ul><li>Social media visibility and visual styling for brands in fashion, beauty, home decor, FMCG and lifestyle.</li><li>Directed social content for the Duchess Utsav events and worked with influencers, TV and news partners on PR.</li><li>Managed Instagram, Facebook, WhatsApp and email marketing.</li></ul></div>
+    <div class="card"><h3>Beyondskool (EdTech)</h3><p class="meta">Sales Manager, Dec 2021 to Jun 2022</p>
+      <div class="big"><span><b>₹1 crore</b>revenue in 4 months</span><span><b>68%</b>demo-to-enrollment</span></div>
+      <ul><li>Ran the consumer sales pipeline in LeadSquared across the UK, US, Australia and New Zealand.</li><li>Recognised as the highest consistent performer.</li></ul></div>
+    <div class="card"><h3>Siemens Healthineers</h3><p class="meta">Management Trainee, Point of Care division, Nov 2024 to Jun 2025</p>
+      <ul><li>Built a data-driven go-to-market plan to enter untapped B2B sectors.</li><li>Led internal brand communication and multimedia content for complex medical products.</li><li>Ranked 1st in product domain training; Special Recognition Award for the global kickoff.</li></ul></div>
+    <div class="card"><h3>Agarwals &amp; Sons</h3><p class="meta">Marketing Manager, Jun 2025 to present</p>
+      <ul><li>Built Tableau and Power BI dashboards to track marketing KPIs.</li><li>Co-designed and launched the company website.</li><li>Ran market research for sales and managed WhatsApp and email campaigns.</li></ul></div>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="ed">
+  <div><p class="label">Education</p><h2 id="ed" style="margin-top:6px">Where I studied</h2></div>
+  <div class="cards">
+    <div class="card"><h3>Master of Global Business, Global Marketing Management</h3><p class="meta">SPJain School of Global Management, Dubai and Singapore, 2023 to 2025</p>
+      <ul><li>Dean's List, Terms 2 and 3.</li><li>Head of the Academic Committee and part of the Interface Projects Community.</li><li>Consultant on Majid Al Futtaim's Crate &amp; Barrel Gift Registry in the UAE.</li><li>Recognised in Python Programming for exploratory data analysis.</li></ul></div>
+    <div class="card"><h3>BA, Culinary Arts and Catering Technology</h3><p class="meta">Culinary Academy of India, Hyderabad, 2018 to 2021</p>
+      <ul><li>First Division, GPA 8.13.</li><li>Editor of the college newsletter.</li><li>Took part in the Guinness World Record for the largest bread display, 2018.</li></ul></div>
+  </div>
+  <div class="note"><b>Certifications.</b> Meta Marketing Analytics; Google Foundations of Digital Marketing and E-Commerce; Google Foundations of Project Management; Integrated Marketing Communications (IE Business School); Python Programming (SPJain); Power BI (college certificate).</div>
+</section>
+
 <section class="sec"><div><p class="label">Toolkit</p><h2 style="margin-top:6px">What I work with</h2></div>
-  <ul class="skills"><li>SQL (SQLite)</li><li>Python</li><li>pandas</li><li>scipy</li><li>matplotlib</li><li>Plotly</li><li>Streamlit</li><li>Tableau</li><li>Power BI</li><li>Power Query (M)</li><li>Statistical testing</li><li>RFM segmentation</li><li>Jupyter</li></ul>
+  <ul class="skills"><li>SQL (SQLite)</li><li>Python</li><li>pandas</li><li>scipy</li><li>matplotlib</li><li>Plotly</li><li>Streamlit</li><li>Tableau</li><li>Power BI</li><li>Power Query (M)</li><li>Google Analytics</li><li>Meta Ads</li><li>Google Ads</li><li>SEMrush</li><li>LeadSquared</li><li>Statistical testing</li><li>RFM segmentation</li><li>Jupyter</li></ul>
   <p class="note"><b>Data cleaning:</b> I cleaned the messy Brew Room exports (mixed dates, <code>Rs</code>/<code>INR</code> amounts, duplicate and test bills) in Power Query, and checked the result against a Python answer key: 2,421 transactions, total ₹12,80,548, 13 Instagram rows, 24 loyalty members. Scripts are in the <code>power-query</code> folder on GitHub.</p>
 </section>
 <footer>Built with Python and SQL. Source: github.com/Amizingamy/Data-Analytics-Portfolio</footer>
