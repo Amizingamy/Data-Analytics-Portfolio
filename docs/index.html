@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Data analytics portfolio of Amisha Agarwal: SQL, Python, Tableau, Power BI and Power Query projects.">
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Amisha Agarwal Data Portfolio</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap">
+<style>
+/* Layout: one narrow reading column; case study = chart, one-line takeaway, repeat; SQL as tabs; accent teal used only for the campaign/"winning" bars, everything else slate */
+:root{--bg:#f6f8f9;--surface:#fff;--ink:#12202b;--ink2:#4b5b68;--muted:#8a98a4;--line:#e1e7eb;--accent:#0f766e;--grey:#b9c4cc;--code:#eef2f4;
+--font:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;--head:'Space Grotesk','Inter',system-ui,sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d151b;--surface:#141f27;--ink:#e8eef2;--ink2:#a9b8c3;--muted:#7a8a96;--line:#25333d;--accent:#2dd4bf;--grey:#3c4e5a;--code:#0f1a21;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0d151b;--surface:#141f27;--ink:#e8eef2;--ink2:#a9b8c3;--muted:#7a8a96;--line:#25333d;--accent:#2dd4bf;--grey:#3c4e5a;--code:#0f1a21;color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.6;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:40px 64px}
+main{max-width:780px;margin:0 auto;display:flex;flex-direction:column;gap:56px}
+h1,h2,h3{font-family:var(--head);line-height:1.15;text-wrap:balance;margin:0}
+h1{font-size:clamp(2rem,6vw,3rem);letter-spacing:-.02em}
+h2{font-size:1.6rem;letter-spacing:-.01em}h3{font-size:1.05rem}
+p{margin:0}.lead{font-size:1.15rem;color:var(--ink2);max-width:60ch;margin-top:14px}
+.label{font-size:.75rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.links a{color:var(--ink);border:1px solid var(--line);background:var(--surface);padding:8px 14px;border-radius:8px;text-decoration:none;font-weight:500;font-size:.92rem}
+.links a:hover,.links a:focus-visible{border-color:var(--accent);outline:none}
+.note{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px;color:var(--ink2);font-size:.92rem}
+.note b{color:var(--ink)}
+.sec{display:flex;flex-direction:column;gap:22px}
+.chart{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 18px 12px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.chart p.t{font-weight:600}.chart p.s{color:var(--ink2);font-size:.92rem}
+svg{width:100%;height:auto;display:block}svg text{fill:var(--ink2);font-family:var(--font);font-size:12px}
+svg .v{fill:var(--ink);font-weight:600}svg .ax{stroke:var(--line)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:18px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.stat b{display:block;font-family:var(--head);font-size:1.7rem;line-height:1.1}.stat span{font-size:.85rem;color:var(--ink2)}
+.tabs{display:flex;flex-wrap:wrap;gap:8px}
+.tabs button{font:inherit;font-size:.9rem;font-weight:500;color:var(--ink2);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:7px 12px;cursor:pointer}
+.tabs button[aria-selected="true"]{color:var(--ink);border-color:var(--accent);box-shadow:inset 0 -2px 0 var(--accent)}
+.tabs button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.q{display:flex;flex-direction:column;gap:14px}
+pre{margin:0;background:var(--code);border:1px solid var(--line);border-radius:10px;padding:14px 16px;overflow-x:auto;font-size:.82rem;line-height:1.55;color:var(--ink)}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:9px 14px;border-bottom:1px solid var(--line);white-space:nowrap}th{color:var(--muted);font-size:.75rem;letter-spacing:.06em;text-transform:uppercase}tr:last-child td{border-bottom:0}
+ul.skills{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}ul.skills li{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:5px 13px;font-size:.88rem;color:var(--ink2)}
+footer{color:var(--muted);font-size:.85rem}
+</style>
+</head>
+<body>
+
+<main>
+<header>
+  <p class="label">Data analytics portfolio</p>
+  <h1 style="margin-top:10px">Amisha Agarwal</h1>
+  <p class="lead">Social media and marketing manager moving into data analytics. I turn campaign questions into SQL queries, Python analysis and dashboards. Based in Chennai.</p>
+  <div class="links">
+    <a href="https://github.com/Amizingamy/Data-Analytics-Portfolio">GitHub: all code and notebooks</a>
+    <a href="https://public.tableau.com/views/BrewRoomChristmasCampaign/Dashboard1">Interactive Tableau dashboard</a>
+    <a href="https://data-analytics-portfolio-6im4jotwqda9nprm4dutwd.streamlit.app/">Live app: Earthquake Tracker</a>
+  </div>
+</header>
+
+<section class="sec" aria-labelledby="cs">
+  <div><p class="label">Case study</p><h2 id="cs" style="margin-top:6px">Did the Brew Room Christmas campaign work?</h2>
+  <p class="lead" style="font-size:1rem">I ran this campaign at a café in Mylapore, Chennai. Here I measure the revenue lift, the products behind it, the Instagram effect and loyalty behaviour.</p></div>
+  <div class="note"><b>About the data.</b> The real sales figures are confidential, so the dataset is simulated around the few real numbers I can share (about ₹5,00,000 from hampers, about 20 loyalty sign-ups, about 6,000 organic reach). Read the results as a demonstration of method, not as the business's real results.</div>
+  <div class="stats" id="stats"></div>
+  <div class="chart"><p class="t">Daily revenue, 1 to 25 December</p><p class="s">Revenue jumped from the day the campaign started on 13 December.</p><div id="c-daily"></div></div>
+  <div class="grid2">
+    <div class="chart"><p class="t">Campaign revenue by product</p><p class="s">Gifting hampers were about half of it.</p><div id="c-prod"></div></div>
+    <div class="chart"><p class="t">Average reach per Instagram post</p><p class="s">Riddle posts reached about 58% more people.</p><div id="c-ig"></div></div>
+  </div>
+  <div class="grid2">
+    <div class="chart"><p class="t">Average spend per loyalty member (₹)</p><p class="s">Higher tiers spend more. Referrers spend more too.</p><div id="c-tier"></div></div>
+    <div class="chart"><p class="t">Customers vs revenue by RFM segment (%)</p><p class="s">A quarter of customers bring over half the revenue.</p><div id="c-rfm"></div></div>
+  </div>
+  <div class="note"><b>Is the lift real?</b> Average daily revenue rose from ₹20,897 to ₹79,214 (+279%, 95% bootstrap range 222% to 344%). Welch t-test p = 1.1e-07 and Mann-Whitney p = 1.2e-05. Caveat: December demand rises anyway, so with real data I would add a control to separate the campaign from the season. <a href="https://github.com/Amizingamy/Data-Analytics-Portfolio/blob/main/brew-room-campaign-analytics/analysis/campaign_lift_and_rfm.ipynb" style="color:var(--accent)">Read the full notebook</a>.</div>
+</section>
+
+<section class="sec" aria-labelledby="sq">
+  <div><p class="label">SQL</p><h2 id="sq" style="margin-top:6px">Four of the twelve queries</h2>
+  <p class="lead" style="font-size:1rem">Written in SQLite using CTEs, window functions and conditional aggregation. Each shows the real output. The other eight are in the repo.</p></div>
+  <div class="tabs" role="tablist" id="tabs"></div>
+  <div class="q" id="qbody" role="tabpanel"></div>
+</section>
+
+<section class="sec"><div><p class="label">Toolkit</p><h2 style="margin-top:6px">What I work with</h2></div>
+  <ul class="skills"><li>SQL (SQLite)</li><li>Python</li><li>pandas</li><li>scipy</li><li>matplotlib</li><li>Plotly</li><li>Streamlit</li><li>Tableau</li><li>Power BI</li><li>Power Query (M)</li><li>Statistical testing</li><li>RFM segmentation</li><li>Jupyter</li></ul>
+  <p class="note"><b>Data cleaning:</b> I cleaned the messy Brew Room exports (mixed dates, <code>Rs</code>/<code>INR</code> amounts, duplicate and test bills) in Power Query, and checked the result against a Python answer key: 2,421 transactions, total ₹12,80,548, 13 Instagram rows, 24 loyalty members. Scripts are in the <code>power-query</code> folder on GitHub.</p>
+</section>
+<footer>Built with Python and SQL. Source: github.com/Amizingamy/Data-Analytics-Portfolio</footer>
+</main>
+<script>
+const D={"daily": [["2023-12-01", 24892], ["2023-12-02", 22278], ["2023-12-03", 25759], ["2023-12-04", 19354], ["2023-12-05", 15191], ["2023-12-06", 16125], ["2023-12-07", 18184], ["2023-12-08", 23685], ["2023-12-09", 24267], ["2023-12-10", 22642], ["2023-12-11", 19266], ["2023-12-12", 19120], ["2023-12-13", 59820], ["2023-12-14", 61666], ["2023-12-15", 92943], ["2023-12-16", 73774], ["2023-12-17", 95911], ["2023-12-18", 58466], ["2023-12-19", 64991], ["2023-12-20", 62037], ["2023-12-21", 67448], ["2023-12-22", 95171], ["2023-12-23", 102176], ["2023-12-24", 118822], ["2023-12-25", 76560]], "prod": [["Gifting Hampers", 499998], ["Plum Cake", 158798], ["Christmas Truffles", 132266], ["Christmas Cupcake Tree", 103373], ["Hot Chocolate Board", 68624], ["Regular Menu", 66726]], "q3": {"title": "Which products earned the most during the campaign, and what share of revenue is each?", "sql": "SELECT\n    RANK() OVER (ORDER BY SUM(revenue) DESC)                      AS revenue_rank,\n    product,\n    SUM(revenue)                                                  AS revenue,\n    SUM(units_sold)                                               AS units,\n    ROUND(SUM(revenue) * 100.0 / SUM(SUM(revenue)) OVER (), 1)    AS pct_of_campaign_revenue\nFROM daily_sales\nWHERE campaign_period LIKE 'Campaign%'\nGROUP BY product\nORDER BY revenue_rank;", "cols": ["revenue_rank", "product", "revenue", "units", "pct_of_campaign_revenue"], "rows": [[1, "Gifting Hampers", 499998, 345, 48.6], [2, "Plum Cake", 158798, 352, 15.4], [3, "Christmas Truffles", 132266, 413, 12.8], [4, "Christmas Cupcake Tree", 103373, 575, 10.0], [5, "Hot Chocolate Board", 68624, 266, 6.7], [6, "Regular Menu", 66726, 289, 6.5]]}, "q8": {"title": "Did Instagram riddle posts reach and engage more people than other posts?", "sql": "SELECT\n    CASE WHEN post_theme LIKE '%Riddle%' THEN 'Riddle post' ELSE 'Other post' END AS post_type,\n    COUNT(*)                          AS posts,\n    ROUND(AVG(reach))                 AS avg_reach,\n    ROUND(AVG(saves), 1)              AS avg_saves,\n    ROUND(AVG(story_replies), 1)      AS avg_story_replies\nFROM instagram_engagement\nGROUP BY post_type;", "cols": ["post_type", "posts", "avg_reach", "avg_saves", "avg_story_replies"], "rows": [["Other post", 10, 429.0, 9.9, 6.4], ["Riddle post", 3, 679.0, 13.7, 25.3]]}, "q10": {"title": "How do loyalty tiers compare on visits, spend and rewards redeemed?", "sql": "SELECT\n    tier,\n    COUNT(*)                                                      AS members,\n    ROUND(AVG(visits_post_signup), 1)                             AS avg_visits,\n    ROUND(AVG(total_spend_post_signup))                           AS avg_spend,\n    ROUND(SUM(redeemed_reward) * 100.0 / COUNT(*), 0)\n                                                                  AS pct_redeemed\nFROM loyalty_members\nGROUP BY tier\nORDER BY avg_spend DESC;", "cols": ["tier", "members", "avg_visits", "avg_spend", "pct_redeemed"], "rows": [["Gold", 4, 9.3, 4299.0, 50.0], ["Silver", 8, 6.4, 2864.0, 88.0], ["Bronze", 12, 4.3, 1691.0, 58.0]]}, "q12": {"title": "Do members who referred a friend spend more than those who did not?", "sql": "SELECT\n    referred_a_friend,\n    COUNT(*)                              AS members,\n    ROUND(AVG(total_spend_post_signup))   AS avg_spend,\n    ROUND(AVG(visits_post_signup), 1)     AS avg_visits\nFROM loyalty_members\nGROUP BY referred_a_friend;", "cols": ["referred_a_friend", "members", "avg_spend", "avg_visits"], "rows": [[0.0, 17.0, 2109.0, 5.1], [1.0, 7.0, 3507.0, 7.7]]}};
+const NS='http://www.w3.org/2000/svg';
+const inr=n=>'₹'+Math.round(n).toLocaleString('en-IN');
+function svg(w,h,body){return `<svg viewBox="0 0 ${w} ${h}" role="img">${body}</svg>`}
+const A='var(--accent)',G='var(--grey)';
+// stats
+const camp=D.daily.filter(r=>r[0]>='2023-12-13').reduce((a,r)=>a+r[1],0);
+document.getElementById('stats').innerHTML=[['+279%','daily revenue lift'],[inr(79214),'avg per campaign day'],[inr(camp),'campaign revenue'],['49%','from gifting hampers']].map(x=>`<div class="stat"><b>${x[0]}</b><span>${x[1]}</span></div>`).join('');
+// daily bars
+(function(){const d=D.daily,W=720,H=280,l=46,b=28,t=30,r=8,max=Math.max(...d.map(x=>x[1])),bw=(W-l-r)/d.length;
+let s='';[0,50000,100000,150000].forEach(v=>{const y=H-b-(H-b-t)*v/max;if(y>=t-1)s+=`<line class="ax" x1="${l}" x2="${W-r}" y1="${y}" y2="${y}"/><text x="${l-6}" y="${y+4}" text-anchor="end">${v/1000}k</text>`});
+d.forEach((x,i)=>{const h=(H-b-t)*x[1]/max,xx=l+i*bw+bw*.15,c=x[0]>='2023-12-13';s+=`<rect x="${xx}" y="${H-b-h}" width="${bw*.7}" height="${h}" rx="2" fill="${c?A:G}"><title>${x[0]}: ${inr(x[1])}</title></rect>`;
+if(i%4==0||i==d.length-1)s+=`<text x="${xx+bw*.35}" y="${H-10}" text-anchor="middle">${+x[0].slice(8)} Dec</text>`});
+s+=`<text x="${l+4}" y="${t-14}" style="font-weight:600">Before: avg ₹20,897 a day</text><text x="${l+bw*12+4}" y="${t-14}" class="v" style="fill:var(--accent)">During: avg ₹79,214 a day</text>`;
+document.getElementById('c-daily').innerHTML=svg(W,H,s)})();
+// horizontal bar helper
+function hbars(id,rows,fmt,hi,lw){const W=360,rh=34,l=lw,r=70,max=Math.max(...rows.map(x=>x[1]));let s='';
+rows.forEach((x,i)=>{const y=i*rh+4,w=(W-l-r)*x[1]/max;s+=`<text x="${l-8}" y="${y+16}" text-anchor="end">${x[0]}</text><rect x="${l}" y="${y+4}" width="${w}" height="18" rx="3" fill="${i==hi?A:G}"/><text class="v" x="${l+w+6}" y="${y+17}">${fmt(x[1])}</text>`});
+document.getElementById(id).innerHTML=svg(W,rows.length*rh+8,s)}
+hbars('c-prod',D.prod.map(x=>[x[0].replace('Christmas ','Xmas '),x[1]]),v=>inr(v/1000)+'k',0,150);
+hbars('c-ig',D.q8.rows.map(x=>[x[0],x[2]]).reverse(),v=>v.toLocaleString('en-IN'),0,92);
+(function(){const rows=[...D.q10.rows].reverse().map(x=>[x[0],x[3]]);hbars('c-tier',rows,v=>inr(v),2,62)})();
+// rfm paired
+(function(){const seg=[['Champions',25,54],['At risk',15,12],['Occasional',32,9]],W=360,rh=62,l=88;let s='';
+seg.forEach((x,i)=>{const y=i*rh+4;s+=`<text x="${l-8}" y="${y+20}" text-anchor="end">${x[0]}</text>
+<rect x="${l}" y="${y+4}" width="${x[1]*2.8}" height="15" rx="3" fill="${G}"/><text x="${l+x[1]*2.8+5}" y="${y+16}">${x[1]}% of customers</text>
+<rect x="${l}" y="${y+26}" width="${x[2]*2.8}" height="15" rx="3" fill="${A}"/><text class="v" x="${l+x[2]*2.8+5}" y="${y+38}">${x[2]}% of revenue</text>`});
+document.getElementById('c-rfm').innerHTML=svg(W,seg.length*rh+6,s)})();
+// SQL tabs
+const names={q3:'Product ranking',q8:'Instagram riddles',q10:'Loyalty tiers',q12:'Referrals'},keys=Object.keys(names);
+function show(k){document.querySelectorAll('#tabs button').forEach(b=>b.setAttribute('aria-selected',b.dataset.k==k));const q=D[k];
+const esc=t=>t.replace(/&/g,'&amp;').replace(/</g,'&lt;');
+document.getElementById('qbody').innerHTML=`<h3>${esc(q.title)}</h3><pre><code>${esc(q.sql)}</code></pre><div class="tw"><table><thead><tr>${q.cols.map(c=>`<th>${c.replace(/_/g,' ')}</th>`).join('')}</tr></thead><tbody>${q.rows.map(r=>`<tr>${r.map(v=>`<td>${typeof v=='number'?v.toLocaleString('en-IN'):v}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`}
+document.getElementById('tabs').innerHTML=keys.map(k=>`<button role="tab" data-k="${k}">${names[k]}</button>`).join('');
+document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>show(b.dataset.k));show('q3');
+</script>
+
+</body>
+</html>
