@@ -14,7 +14,7 @@ A real-time dashboard that pulls live earthquake data from the [USGS Earthquake 
 
 ## How I built it
 
-I used Python for the data pipeline (`requests` to pull the live feed, `pandas` to clean it), `Plotly` for the interactive map and charts, and `Streamlit` to turn it into a shareable web app. AI (Claude) was my coding partner throughout — I directed the feature set, tested and debugged the output, and made the design decisions; the AI helped me move faster on syntax and boilerplate.
+I used Python for the data pipeline (`requests` to pull the live feed, `pandas` to clean it), `Plotly` for the interactive map and charts, and `Streamlit` to turn it into a shareable web app.
 
 ## Tech stack
 

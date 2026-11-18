@@ -27,10 +27,6 @@ Based in Chennai, India. Email: a-amisha@outlook.com
 - **Dashboards:** Tableau, Power BI, Plotly, Streamlit
 - **Marketing data:** Google Analytics, Meta Ads, Google Ads, SEMrush, LeadSquared CRM
 
-## How I built this
-
-I used Claude (an AI assistant) as a coding and learning partner on these projects, for example to draft code, explain methods and check results. I chose the business questions, ran everything myself and built the Tableau and Power BI work by hand.
-
 ## A note on the data
 
 Where a project uses business data that is confidential, I use a simulated dataset built around the figures I am allowed to share, and each project's README says exactly what is real and what is simulated.
