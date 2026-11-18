@@ -26,7 +26,8 @@ Everything else (daily revenue, product splits, member behaviour) is made up to 
 | `data/instagram_engagement.csv` | Daily Instagram reach, likes, saves, comments and story replies for the campaign |
 | `data/transactions.csv` | 2,421 simulated individual purchases by 282 customers. Adds up exactly to `daily_sales.csv`; customer IDs are not linked to loyalty members |
 | `analysis/campaign_lift_and_rfm.ipynb` | Python notebook: statistical test of the campaign lift (Welch t-test, Mann-Whitney, bootstrap) and RFM customer segmentation, with charts |
-| `alteryx/` | Practice kit: messy raw exports, a pandas answer key, and a build guide for cleaning them in Alteryx |
+| `power-query/` | Power Query (M) scripts that clean the three messy exports, run in Power BI Desktop, with screenshots of the results |
+| `alteryx/` | Raw messy exports and answer key used by the Power Query cleaning. Also has an unused Alteryx build guide: messy raw exports, a pandas answer key, and a build guide for cleaning them in Alteryx |
 | `generate_transactions.py` | Splits daily totals into individual purchases (run after `generate_data.py`) |
 | `sql/queries.sql` | 12 SQL queries, each answering a business question |
 | `sql/RESULTS.md` | Every query with its output, readable without running anything |
@@ -64,6 +65,6 @@ python3 run_sql.py --save-db   # also saves brew_room.db to open in DB Browser f
 - Riddle posts reached about 58% more people than other posts and got far more story replies.
 - Loyalty members who referred a friend spent more and visited more often than those who did not.
 
-## Coming next
+## Note on Alteryx
 
-- The Alteryx cleaning workflow (`.yxmd` and screenshots) in `alteryx/`.
+I started with Alteryx but its trial needs a work email, so I did the same cleaning in Power Query instead. The Alteryx guide is kept as a reference only.

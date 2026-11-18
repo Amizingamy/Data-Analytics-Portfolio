@@ -2,7 +2,7 @@
 
 The same cleaning as `../alteryx/reference_cleaner.py`, done in Power Query. Three scripts take the messy exports in `../alteryx/raw/` and produce the clean tables.
 
-> **Status:** the scripts are written to mirror the tested Python cleaner, but they have **not been run in Power BI Desktop by their author**. Run them, compare against the checks below, and fix anything that differs.
+> **Status:** all three scripts have been run in Power BI Desktop and pass the checks below (2,421 transactions, total ₹12,80,548, 13 Instagram rows, 24 loyalty members, tiers Bronze/Silver/Gold).
 
 | Script | Input | Output |
 |---|---|---|
@@ -29,3 +29,18 @@ The same cleaning as `../alteryx/reference_cleaner.py`, done in Power Query. Thr
 | `tier` values | Bronze, Silver, Gold only |
 
 To check totals: close the editor (Home → **Close & Apply**), add a Card visual, drag `amount` into it.
+
+## Screenshots
+
+| What | Image |
+|---|---|
+| Raw POS export before cleaning (padded text, mixed dates, `Rs`/`INR` amounts) | ![raw](screenshots/raw_pos_bills_before_cleaning.png) |
+| `clean_instagram`: 13 rows after removing junk lines and the Total row | ![instagram](screenshots/clean_instagram_13_rows.png) |
+| `clean_loyalty`: 24 members, tiers fixed, flags as true/false | ![loyalty](screenshots/clean_loyalty_24_members.png) |
+| Power BI report: card shows 1280548, matching the answer key | ![report](screenshots/power_bi_report_total_1280548.png) |
+
+## What the cleaning does
+- Removes junk lines, blank rows, test bills and the Total row; drops duplicate bills.
+- Trims text and fixes casing; maps item and post names to clean names with lookup tables.
+- Converts two date formats to one; strips `Rs` and `INR` from amounts.
+- Turns Y/Yes/TRUE style flags into true/false.

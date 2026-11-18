@@ -13,7 +13,7 @@ Based in Chennai, India. Email: a-amisha@outlook.com
 
 **Live dashboard:** [Brew Room Christmas Campaign on Tableau Public](https://public.tableau.com/views/BrewRoomChristmasCampaign/Dashboard1).
 
-In progress: an Alteryx cleaning workflow for the Brew Room project (the practice data and a tested Python answer key are already in the folder).
+**Data cleaning:** the Brew Room messy exports are cleaned in Power Query (Power BI Desktop), with the scripts and screenshots in [`power-query/`](brew-room-campaign-analytics/power-query/). Each result is checked against a tested Python answer key.
 
 ## Other work
 
@@ -23,8 +23,13 @@ In progress: an Alteryx cleaning workflow for the Brew Room project (the practic
 ## Skills
 
 - **Analysis:** SQL (joins, window functions, CTEs), Python (pandas), statistics (t-tests, ANOVA, regression, factor and cluster analysis)
+- **Data cleaning:** Power Query (M), pandas
 - **Dashboards:** Tableau, Power BI, Plotly, Streamlit
 - **Marketing data:** Google Analytics, Meta Ads, Google Ads, SEMrush, LeadSquared CRM
+
+## How I built this
+
+I used Claude (an AI assistant) as a coding and learning partner on these projects, for example to draft code, explain methods and check results. I chose the business questions, ran everything myself and built the Tableau and Power BI work by hand.
 
 ## A note on the data
 
