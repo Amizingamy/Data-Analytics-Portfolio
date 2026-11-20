@@ -17,4 +17,6 @@ document.documentElement.classList.add('js');
   if(f){f.addEventListener('click',function(e){var b=e.target.closest('.f');if(!b)return;
     f.querySelectorAll('.f').forEach(function(x){x.setAttribute('aria-pressed',x===b)});
     document.querySelectorAll('#gal .shot').forEach(function(s){s.hidden=!(b.dataset.c==='all'||s.dataset.c===b.dataset.c)})})}
+  function openHash(){var h=location.hash&&document.getElementById(location.hash.slice(1));if(h){var d=h.closest('details');if(d){d.open=true;h.scrollIntoView()}}}
+  openHash();addEventListener('hashchange',openHash);
 })();
