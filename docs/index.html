@@ -1,390 +1,102 @@
 <!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Amisha Agarwal | Portfolio</title>
-<meta name="description" content="Amisha Agarwal: marketing and data analytics portfolio. Campaigns, SQL, Python, dashboards, sales and design.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&display=swap">
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Amisha Agarwal | Marketing and Data Portfolio</title>
+<meta name="description" content="Amisha Agarwal: marketing manager moving into data analytics. Campaigns, SQL, Python, dashboards, sales and design. Press a number to explore.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"><link rel="stylesheet" href="style.css">
 <style>
-:root{--paper:#f3e8d0;--card:#fffdf6;--ink:#231c17;--ink2:#5a4c41;--muted:#8c7b6c;--line:#d9c9ac;--accent:#0f766e;--tomato:#e4572e;--mustard:#f0b429;--grey:#c9bba3;--code:#f6efdd;
---font:'Trebuchet MS',Verdana,'DejaVu Sans',sans-serif;--head:'Fraunces',Georgia,'Times New Roman',serif;color-scheme:light}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background-color:var(--paper);background-image:radial-gradient(rgba(35,28,23,.09) 1.2px,transparent 1.4px);background-size:18px 18px;color:var(--ink);font-family:var(--font);font-size:15.5px;line-height:1.6;padding:0 max(14px,env(safe-area-inset-right,0px)) 60px max(14px,env(safe-area-inset-left,0px))}
-a{color:#1d4ed8}a:visited{color:#6d28d9}
-h1,h2,h3{font-family:var(--head);line-height:1.12;margin:0;text-wrap:balance}
-p{margin:0}
-.wrap{max-width:900px;margin:0 auto;display:flex;flex-direction:column;gap:34px}
-/* ticker */
-.ticker{margin:0 calc(-1*max(14px,env(safe-area-inset-left,0px)));background:var(--ink);color:var(--mustard);overflow:hidden;white-space:nowrap;font-size:.85rem;letter-spacing:.06em;border-bottom:3px solid var(--tomato)}
-.ticker div{display:inline-block;padding:7px 0;animation:tick 38s linear infinite}
-.ticker:hover div{animation-play-state:paused}
-.ticker span{margin:0 22px}
-@keyframes tick{to{transform:translateX(-50%)}}
-/* window chrome */
-.win{background:var(--card);border:2.5px solid var(--ink);border-radius:12px;box-shadow:6px 6px 0 var(--ink);overflow:hidden;min-width:0}
-.bar{display:flex;align-items:center;gap:7px;background:linear-gradient(#ef6a3f,#cf4a22);color:#fff;padding:7px 12px;font-weight:700;font-size:.88rem;letter-spacing:.03em;border-bottom:2.5px solid var(--ink)}
-.bar i{width:11px;height:11px;border-radius:50%;background:#fff;border:1.5px solid var(--ink);display:inline-block}
-.bar i:nth-child(2){background:var(--mustard)}.bar i:nth-child(3){background:#8fd694}
-.bar b{margin-left:6px}
-.bar.teal{background:linear-gradient(#1b9086,#0f6b63)}.bar.gold{background:linear-gradient(#f6c647,#e0a416);color:var(--ink)}.bar.ink{background:linear-gradient(#4a3f37,#2a221d)}
-.body{padding:22px;display:flex;flex-direction:column;gap:20px}
-.kick{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
-h2{font-size:clamp(1.5rem,4.4vw,2rem)}h3{font-size:1.05rem}
-.lead{color:var(--ink2);max-width:62ch}
-.note{background:var(--code);border:1.5px dashed var(--grey);border-radius:10px;padding:12px 14px;color:var(--ink2);font-size:.9rem}.note b{color:var(--ink)}
-.btn{display:inline-block;text-decoration:none;color:var(--ink)!important;background:linear-gradient(#fffdf6,#efe3c6);border:2px solid var(--ink);border-radius:8px;padding:7px 13px;font-weight:700;font-size:.88rem;box-shadow:2px 2px 0 var(--ink);cursor:pointer;font-family:inherit}
-.btn:hover{background:linear-gradient(#fff6d6,#f7d97c)}.btn:active{transform:translate(2px,2px);box-shadow:none}
-.btn:focus-visible,.trk:focus-visible,.f:focus-visible{outline:3px solid var(--tomato);outline-offset:2px}
-.row{display:flex;flex-wrap:wrap;gap:10px}
-/* hero */
-.hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:26px;align-items:start}
-@media(max-width:760px){.hero{grid-template-columns:1fr}}
-.deck{position:relative;width:100%;max-width:460px;aspect-ratio:1/1;margin:0 auto}
-.plinth{position:absolute;inset:0;border-radius:22px;border:2.5px solid var(--ink);background:linear-gradient(135deg,#b9753b,#8f5326 55%,#a76530);box-shadow:inset 0 0 0 7px rgba(255,255,255,.08),4px 4px 0 var(--ink)}
-.plinth::after{content:"";position:absolute;inset:0;border-radius:20px;background:repeating-linear-gradient(100deg,rgba(0,0,0,.06) 0 2px,transparent 2px 7px)}
-.platter{position:absolute;left:6%;top:16%;width:78%;aspect-ratio:1;border-radius:50%;background:#2b2b2e;border:3px solid #111;box-shadow:0 0 0 6px rgba(0,0,0,.25)}
-.vinyl{position:absolute;inset:4%;border-radius:50%;background:radial-gradient(circle,#111 0 13%,transparent 13.2%),repeating-radial-gradient(circle,#0d0d0f 0 2px,#1c1c20 2px 3.4px);animation:spin 3.4s linear infinite;animation-play-state:paused}
-.deck.on .vinyl{animation-play-state:running}
-@keyframes spin{to{transform:rotate(360deg)}}
-.vinyl svg{position:absolute;inset:25%;width:50%;height:50%}
-.vinyl svg text{fill:#f3e8d0;font-family:var(--font);font-size:8.2px;letter-spacing:.08em;font-weight:700}
-.sheen{position:absolute;inset:4%;border-radius:50%;pointer-events:none;background:conic-gradient(from 25deg,transparent 0 18%,rgba(255,255,255,.17) 24%,transparent 30%,transparent 68%,rgba(255,255,255,.12) 74%,transparent 80%)}
-.label{position:absolute;left:50%;top:50%;width:31%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;border:3px solid var(--tomato);background:var(--mustard) center/cover no-repeat url(img/amisha.jpg);box-shadow:0 0 0 4px #111}
-.arm{position:absolute;right:12%;top:14%;width:0;height:0;transform-origin:0 0;transform:rotate(-6deg);transition:transform 1.1s cubic-bezier(.5,0,.3,1);z-index:5}
-.arm .rod{position:absolute;left:-3px;top:0;width:6px;height:58%;min-height:0;border-radius:4px;background:linear-gradient(90deg,#e7e7ea,#9a9aa2);border:1.5px solid var(--ink)}
-.arm .pivot{position:absolute;left:-17px;top:-17px;width:34px;height:34px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,#bdbdc4 60%,#7d7d85);border:2.5px solid var(--ink)}
-.arm .head{position:absolute;left:-8px;width:16px;height:26px;border-radius:4px;background:var(--ink);border:1.5px solid var(--ink)}
-.deck .stage-w{position:absolute;inset:0}
-.deck{--L:58}
-.chip{position:absolute;z-index:6;transform:translate(-50%,-50%) rotate(var(--r,0deg));background:#fff;border:2px solid var(--ink);border-radius:999px;padding:3px 11px;font-size:.78rem;font-weight:700;box-shadow:2px 2px 0 var(--ink);white-space:nowrap;opacity:0;transition:left .7s cubic-bezier(.2,1.5,.4,1),top .7s cubic-bezier(.2,1.5,.4,1),opacity .25s}
-.chip.in{opacity:1}
-.chip:nth-child(3n){background:var(--mustard)}.chip:nth-child(3n+1){background:#bfe9e3}.chip:nth-child(3n+2){background:#ffd6c7}
-.ctl{position:absolute;left:6%;bottom:3.5%;z-index:7;display:flex;gap:8px}
-.ctl .btn{padding:3px 11px;font-size:.8rem}
-.lcd{position:absolute;right:6%;bottom:4%;z-index:7;background:#1c2a1f;color:#9dfc9d;border:2px solid var(--ink);border-radius:6px;padding:3px 9px;font-family:'Courier New',monospace;font-size:.76rem;max-width:38%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;text-shadow:0 0 6px rgba(120,255,120,.6)}
-h1.name{font-size:clamp(2rem,6vw,3rem);letter-spacing:-.01em}
-h1.name em{font-style:normal;color:var(--tomato)}
-.paths{display:grid;grid-template-columns:repeat(auto-fit,minmax(104px,1fr));gap:10px}
-.path{display:flex;flex-direction:column;gap:1px;text-decoration:none;color:var(--ink)!important;border:2.5px solid var(--ink);border-radius:12px;padding:9px 12px;box-shadow:3px 3px 0 var(--ink);transition:transform .15s}
-.path b{font-family:var(--head);font-size:1.08rem}.path small{font-size:.76rem;color:var(--ink2)}
-.path:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--ink)}.path:active{transform:translate(2px,2px);box-shadow:none}
-.path.a{background:#bfe9e3}.path.b{background:#ffd6c7}.path.c{background:#fbe3a0}
-.path:focus-visible{outline:3px solid var(--tomato);outline-offset:2px}
-.tracks{display:flex;flex-direction:column;gap:7px;margin-top:6px}
-.trk{display:flex;align-items:center;gap:11px;text-align:left;font:inherit;background:#fff;border:2px solid var(--ink);border-radius:9px;padding:7px 11px;cursor:pointer;box-shadow:2px 2px 0 var(--ink);color:var(--ink)}
-.trk b{font-family:'Courier New',monospace;font-size:.8rem;background:var(--ink);color:var(--mustard);border-radius:5px;padding:1px 6px}
-.trk span{font-weight:700;font-size:.93rem;line-height:1.25}.trk small{display:block;font-weight:400;color:var(--muted);font-size:.76rem}
-.trk:hover{background:#fff6d6}.trk[aria-pressed=true]{background:var(--mustard);transform:translate(2px,2px);box-shadow:none}
-.sleeve{position:relative;background:var(--card);border:2.5px solid var(--ink);border-radius:12px;box-shadow:5px 5px 0 var(--tomato);padding:16px;display:flex;flex-direction:column;gap:10px;transform-origin:0 50%;margin-top:4px}
-.sleeve.pop{animation:pop .55s cubic-bezier(.2,1.4,.4,1)}
-@keyframes pop{from{transform:scale(.55) rotate(-5deg);opacity:0}to{transform:none;opacity:1}}
-.big{font-family:var(--head);font-weight:800;font-size:clamp(1.7rem,5vw,2.3rem);color:var(--tomato);line-height:1.05}
-.sleeve p{color:var(--ink2);font-size:.92rem}
-.thumbs{display:flex;gap:8px;flex-wrap:wrap}.thumbs img{width:64px;height:64px;object-fit:cover;border:2px solid var(--ink);border-radius:8px;cursor:zoom-in;background:#eee}
-.jump{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.88rem}
-/* generic blocks */
-.chart,.card,.stat{background:var(--card);border:2px solid var(--ink);border-radius:10px;min-width:0}
-.chart{padding:16px 16px 10px;display:flex;flex-direction:column;gap:6px}.chart p.t{font-weight:700}.chart p.s{color:var(--ink2);font-size:.9rem}
-svg{width:100%;height:auto;display:block}svg text{fill:var(--ink2);font-family:var(--font);font-size:12px}svg .v{fill:var(--ink);font-weight:700}svg .ax{stroke:var(--line)}
-.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:16px}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
-.stat{padding:12px 14px;box-shadow:3px 3px 0 var(--ink)}.stat b{display:block;font-family:var(--head);font-size:1.6rem;line-height:1.1;color:var(--accent)}.stat span{font-size:.84rem;color:var(--ink2)}
-.tabs{display:flex;flex-wrap:wrap;gap:8px}
-.tabs button{font:inherit;font-size:.88rem;font-weight:700;color:var(--ink);background:#fff;border:2px solid var(--ink);border-radius:8px;padding:6px 12px;cursor:pointer}
-.tabs button[aria-selected="true"]{background:var(--mustard);box-shadow:2px 2px 0 var(--ink)}
-.q{display:flex;flex-direction:column;gap:14px}
-pre{margin:0;background:var(--code);border:2px solid var(--ink);border-radius:10px;padding:14px 16px;overflow-x:auto;font-size:.8rem;line-height:1.55}
-.tw{overflow-x:auto;border:2px solid var(--ink);border-radius:10px;background:#fff}
-table{border-collapse:collapse;width:100%;font-size:.88rem;font-variant-numeric:tabular-nums}
-th,td{text-align:left;padding:8px 13px;border-bottom:1px solid var(--line);white-space:nowrap}th{color:var(--muted);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;background:var(--code)}tr:last-child td{border-bottom:0}
-ul.skills{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}ul.skills li{border:2px solid var(--ink);background:#fff;border-radius:999px;padding:3px 12px;font-size:.85rem;font-weight:700}
-ul.skills li:nth-child(3n){background:var(--mustard)}ul.skills li:nth-child(3n+1){background:#bfe9e3}ul.skills li:nth-child(3n+2){background:#ffd6c7}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px}
-.card{padding:16px;display:flex;flex-direction:column;gap:8px;box-shadow:3px 3px 0 var(--ink)}
-.card h3{margin:0}.card .meta{color:var(--muted);font-size:.8rem}
-.card ul{margin:0;padding-left:18px;color:var(--ink2);font-size:.9rem;display:flex;flex-direction:column;gap:5px}
-.card .bigs{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.88rem;color:var(--ink2)}.card .bigs b{color:var(--tomato);font-family:var(--head);font-size:1.2rem;margin-right:4px}
-/* galleries */
-.gal{columns:3 210px;column-gap:14px}
-.shot{break-inside:avoid;margin:0 0 14px;background:#fff;border:2px solid var(--ink);border-radius:10px;overflow:hidden;box-shadow:3px 3px 0 var(--ink)}
-.shot img{display:block;width:100%;height:auto;cursor:zoom-in}
-.shot figcaption{padding:8px 11px;font-size:.82rem;display:flex;flex-direction:column;border-top:2px solid var(--ink)}.shot figcaption span{color:var(--muted);font-size:.76rem}
-.shot[hidden]{display:none}
-.filters{display:flex;flex-wrap:wrap;gap:8px}
-.f{font:inherit;font-size:.85rem;font-weight:700;background:#fff;border:2px solid var(--ink);border-radius:999px;padding:4px 13px;cursor:pointer}.f[aria-pressed=true]{background:var(--tomato);color:#fff}
-.wins{columns:3 240px;column-gap:18px}
-.wins .polaroid{break-inside:avoid;margin:0 0 18px!important}
-.wins .wide{column-span:all}
-.polaroid{background:#fff;border:2px solid var(--ink);border-radius:6px;padding:10px 10px 12px;box-shadow:4px 4px 0 var(--ink);display:flex;flex-direction:column;gap:8px}
-.polaroid img{display:block;width:100%;height:auto;border:1.5px solid var(--line);cursor:zoom-in}
-.polaroid p{font-size:.86rem;color:var(--ink2)}.polaroid p b{color:var(--ink)}
-.tilt1{transform:rotate(-.8deg)}.tilt2{transform:rotate(.7deg)}
-footer{text-align:center;color:var(--ink2);font-size:.82rem;display:flex;flex-direction:column;gap:6px;align-items:center}
-.badge{display:inline-block;border:2px solid var(--ink);background:#fff;border-radius:6px;padding:1px 8px;font-size:.72rem;font-weight:700}
-#lb{position:fixed;inset:0;background:rgba(20,14,10,.88);display:none;align-items:center;justify-content:center;flex-direction:column;gap:10px;z-index:50;padding:18px;cursor:zoom-out}
-#lb.open{display:flex}#lb img{max-width:100%;max-height:82vh;border:3px solid #fff;border-radius:6px;background:#fff}#lb p{color:#fff;font-size:.9rem;text-align:center}
-@media(prefers-reduced-motion:reduce){.vinyl{animation:none!important}.ticker div{animation:none}.sleeve.pop{animation:none}.chip,.arm{transition:none}html{scroll-behavior:auto}}
-</style>
-</head>
-<body>
-<div class="ticker" aria-hidden="true"><div><span>★ WELCOME TO MY CORNER OF THE INTERNET ★</span><span>MARKETING × DATA</span><span>CHENNAI · DUBAI · SINGAPORE</span><span>CAMPAIGNS · SQL · PYTHON · DASHBOARDS</span><span>PICK A TRACK ↓</span><span>★ WELCOME TO MY CORNER OF THE INTERNET ★</span><span>MARKETING × DATA</span><span>CHENNAI · DUBAI · SINGAPORE</span><span>CAMPAIGNS · SQL · PYTHON · DASHBOARDS</span><span>PICK A TRACK ↓</span></div></div>
-<div class="wrap" style="padding-top:28px">
-
-<section class="win" aria-label="Introduction">
- <div class="bar"><i></i><i></i><i></i><b>amisha_agarwal.exe</b></div>
- <div class="body hero">
-  <div>
-   <div class="deck" id="deck">
-    <div class="plinth"></div>
-    <div class="platter"><div class="vinyl" aria-hidden="true">
-      <svg viewBox="0 0 100 100"><defs><path id="ring" d="M50,50 m-41,0 a41,41 0 1,1 82,0 a41,41 0 1,1 -82,0"/></defs><text><textPath href="#ring" textLength="252" lengthAdjust="spacing">AMISHA AGARWAL · MARKETING × DATA ·</textPath></text></svg>
-    </div><div class="sheen"></div><div class="label" role="img" aria-label="Photo of Amisha"></div></div>
-    <div class="arm" id="arm" aria-hidden="true"><div class="rod"></div><div class="pivot"></div><div class="head" id="head"></div></div>
-    <div id="chips"></div>
-    <div class="ctl"><button class="btn" id="pp" aria-label="Play or pause the record">❚❚ Pause</button></div>
-    <div class="lcd" id="lcd" aria-live="polite">NOW SPINNING</div>
-   </div>
-  </div>
-  <div style="display:flex;flex-direction:column;gap:12px;min-width:0">
-   <p class="kick">Hello, you've stumbled across my portfolio</p>
-   <h1 class="name">Hi, I'm <em>Amisha</em>.</h1>
-   <p class="lead">Marketing manager (MBA, Global Marketing Management) moving into data analytics. I run campaigns, then turn campaign questions into SQL, Python and dashboards. Based in Chennai. Drop the needle on whatever you'd like to hear about.</p>
-   <p class="kick" style="margin-top:6px">What would you like to see first?</p>
-   <div class="paths"><a class="path a" href="#cs"><b>Data analytics</b><small>SQL, Python, dashboards</small></a><a class="path b" href="#mk"><b>Marketing</b><small>Campaigns, sales, creative</small></a><a class="path c" href="#ac"><b>Education</b><small>MBA projects, mockups</small></a></div>
-   <p class="kick" style="margin-top:6px">Or drop the needle on a track</p>
-   <div class="tracks" id="tracks"></div>
-  </div>
-  <div class="sleeve" id="sleeve" style="grid-column:1/-1" aria-live="polite"></div>
- </div>
+.hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(24px,5vw,64px);align-items:center;min-height:calc(100vh - 150px);padding:10px 0 40px}
+@media(max-width:860px){.hero{grid-template-columns:1fr;min-height:0}}
+.hello{display:flex;flex-direction:column;gap:20px}
+h1.mega{font-size:clamp(2.8rem,8vw,5.6rem);font-weight:800;letter-spacing:-.045em;line-height:.98}
+.nm{position:relative;color:var(--pink2);white-space:nowrap}
+.nm svg{position:absolute;left:0;bottom:-.14em;width:100%;height:.3em;overflow:visible}
+.nm path{fill:none;stroke:var(--pink);stroke-width:5;stroke-linecap:round;stroke-dasharray:400;stroke-dashoffset:400;animation:draw 1.1s .5s ease forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.ivrhead{font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+.ivr{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;max-width:460px}
+.ivr a{display:flex;align-items:center;gap:14px;text-decoration:none;background:#fff;border-radius:18px;padding:11px 16px;box-shadow:var(--sh);transition:transform .2s,background .2s,box-shadow .2s}
+.ivr b{display:grid;place-items:center;flex:none;width:34px;height:34px;border-radius:50%;background:var(--blush);color:var(--pink2);font-size:.95rem;transition:background .2s,color .2s}
+.ivr span{flex:1;font-weight:700;line-height:1.3}.ivr small{display:block;font-weight:500;color:var(--muted);font-size:.8rem}
+.ivr i{font-style:normal;color:var(--muted);transition:transform .2s,color .2s}
+.ivr a:hover,.ivr a.sel{transform:translateX(6px);background:var(--ink);}
+.ivr a:hover span,.ivr a.sel span{color:#fff}.ivr a:hover small,.ivr a.sel small{color:#d9c9d1}
+.ivr a:hover b,.ivr a.sel b{background:var(--pink);color:#fff}.ivr a:hover i,.ivr a.sel i{color:#fff;transform:translateX(3px)}
+.hint{font-size:.84rem;color:var(--muted)}
+/* phone */
+.stage{position:relative;display:grid;place-items:center;padding:10px 0 20px}
+.phone{width:min(270px,74vw);position:relative;filter:drop-shadow(0 28px 34px rgba(216,27,122,.28));transform:rotate(-3deg)}
+.lid{position:relative;background:linear-gradient(155deg,#ff86c0,#ff3e9d 55%,#e0237f);border-radius:44px 44px 12px 12px;padding:30px 16px 18px;transform-origin:50% 100%;animation:open 1.1s .25s cubic-bezier(.3,1.3,.5,1) both}
+@keyframes open{from{transform:perspective(900px) rotateX(86deg);opacity:.4}to{transform:perspective(900px) rotateX(0);opacity:1}}
+.ant{position:absolute;top:-16px;right:34px;width:14px;height:26px;border-radius:7px 7px 3px 3px;background:linear-gradient(90deg,#ff5fae,#d81b7a)}
+.ant::after{content:"";position:absolute;top:-4px;left:3px;width:8px;height:8px;border-radius:50%;background:#fff;animation:blink 1.6s infinite}
+@keyframes blink{50%{opacity:.2}}
+.spk{position:absolute;top:11px;left:50%;transform:translateX(-50%);width:46px;height:6px;border-radius:3px;background:rgba(255,255,255,.55)}
+.bez{background:#2a1722;border-radius:18px;padding:8px}
+.scr{background:linear-gradient(180deg,#ffffff,#ffe6f2);border-radius:11px;height:216px;overflow:hidden;display:flex;flex-direction:column;font-size:12px;color:#3a1d2c}
+.sb{display:flex;justify-content:space-between;align-items:center;padding:6px 10px;background:#ff3e9d;color:#fff;font-weight:700;letter-spacing:.06em;font-size:10px}
+.sig{display:inline-flex;gap:2px;align-items:flex-end;height:10px}.sig i{width:3px;background:#fff;border-radius:1px}.sig i:nth-child(1){height:3px}.sig i:nth-child(2){height:5px}.sig i:nth-child(3){height:7px}.sig i:nth-child(4){height:10px}
+.bat{width:18px;height:9px;border:1.5px solid #fff;border-radius:2px;position:relative}.bat::after{content:"";position:absolute;inset:1px;right:3px;background:#fff}
+.mt{padding:6px 10px 2px;font-weight:800;font-size:11px;letter-spacing:.08em;color:#d81b7a;text-transform:uppercase}
+.menu{list-style:none;margin:0;padding:2px 6px;flex:1;display:flex;flex-direction:column;gap:2px}
+.menu li{display:flex;align-items:center;gap:8px;padding:5px 8px;border-radius:7px;font-weight:600;cursor:pointer;transition:background .12s}
+.menu li b{display:grid;place-items:center;width:17px;height:17px;border-radius:50%;background:#ffd0e6;color:#d81b7a;font-size:10px;flex:none}
+.menu li.sel{background:#ff3e9d;color:#fff}.menu li.sel b{background:#fff}
+.soft{display:flex;justify-content:space-between;padding:5px 12px 6px;font-weight:800;font-size:10px;color:#d81b7a;border-top:1px solid #ffc4df}
+.hinge{height:16px;margin:-1px 14px;border-radius:0 0 9px 9px;background:linear-gradient(#d9ccd3,#9a8b94);box-shadow:inset 0 2px 3px rgba(255,255,255,.5)}
+.base{background:linear-gradient(160deg,#ff9fcc,#ff4fa3 60%,#e0237f);border-radius:12px 12px 46px 46px;padding:16px 20px 28px;display:flex;flex-direction:column;gap:12px}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.call,.endc{width:54px;height:30px;border-radius:15px 15px 15px 15px;border:0;color:#fff;font-weight:800;font-size:11px;cursor:pointer;box-shadow:0 3px 0 rgba(0,0,0,.2);font-family:inherit}
+.call{background:#2fc46d}.endc{background:#ff5a5a}
+.dpad{width:60px;height:60px;border-radius:50%;background:radial-gradient(circle at 50% 35%,#fff,#ffd6ea);box-shadow:0 3px 0 rgba(0,0,0,.18);display:grid;place-items:center;position:relative}
+.dpad::after{content:"";width:22px;height:22px;border-radius:50%;background:#ff3e9d;box-shadow:inset 0 2px 3px rgba(255,255,255,.5)}
+.dpad button{position:absolute;border:0;background:none;cursor:pointer;color:#d81b7a;font-size:11px;padding:4px;line-height:1}
+.dpad .u{top:1px;left:50%;transform:translateX(-50%)}.dpad .d{bottom:1px;left:50%;transform:translateX(-50%)}
+.pad{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
+.key{height:30px;border:0;border-radius:11px;background:linear-gradient(#fff,#ffe0ef);color:#7a1a4a;font-weight:800;font-size:14px;font-family:inherit;box-shadow:0 3px 0 rgba(120,20,70,.28);cursor:pointer;transition:transform .08s,box-shadow .08s}
+.key.act{color:#d81b7a}.key.down,.key:active{transform:translateY(3px);box-shadow:0 0 0 rgba(0,0,0,0)}
+.key:not(.act){opacity:.75}
+.bubble{position:absolute;z-index:6;top:0;left:-2%;background:#fff;border-radius:18px 18px 18px 4px;padding:9px 14px;font-weight:700;font-size:.82rem;box-shadow:var(--sh);transform:rotate(-4deg);animation:pop .5s 1.4s both cubic-bezier(.3,1.5,.5,1);max-width:170px;pointer-events:none}
+@keyframes pop{from{opacity:0;transform:scale(.5) rotate(-10deg)}to{opacity:1;transform:rotate(-4deg)}}
+.bubble::after{content:"";position:absolute;bottom:-6px;left:18px;width:14px;height:14px;background:#fff;transform:rotate(45deg);border-radius:0 0 4px 0}
+@media(max-width:860px){.bubble{left:2%}}
+.ring{animation:shake .5s 1.3s 2}
+@keyframes shake{0%,100%{transform:rotate(-3deg)}25%{transform:rotate(-6deg)}75%{transform:rotate(0deg)}}
+</style></head><body>
+<div class="wrap">
+<header class="top"><a class="logo" href="index.html">amisha<span>.</span></a><a class="btn ghost" href="mailto:a-amisha@outlook.com">Say hi</a></header>
+<main class="hero">
+<section class="hello">
+<p class="eyebrow">Marketing &times; Data &middot; Chennai</p>
+<h1 class="mega">Hi, I'm <span class="nm">Amisha<svg viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden="true"><path d="M4 12 C 60 2, 120 18, 180 8 S 270 6, 296 10"/></svg></span>.</h1>
+<p class="sub">I run marketing campaigns, then use SQL, Python and dashboards to prove what worked. Thanks for calling.</p>
+<p class="ivrhead">Please choose a line</p>
+<ol class="ivr" id="ivr"><li><a href="data.html" data-i="0"><b>1</b><span>Data analytics<small>SQL, Python, dashboards</small></span><i aria-hidden="true">→</i></a></li><li><a href="marketing.html" data-i="1"><b>2</b><span>Marketing<small>Campaigns and sales</small></span><i aria-hidden="true">→</i></a></li><li><a href="creative.html" data-i="2"><b>3</b><span>Creative work<small>Posts, comics, scrapbooks</small></span><i aria-hidden="true">→</i></a></li><li><a href="education.html" data-i="3"><b>4</b><span>Education<small>MBA and certifications</small></span><i aria-hidden="true">→</i></a></li><li><a href="receipts.html" data-i="4"><b>5</b><span>Receipts<small>Awards and proof</small></span><i aria-hidden="true">→</i></a></li></ol>
+<p class="hint">Tip: press 1 to 5 on your keyboard, or on the phone.</p>
 </section>
-
-<nav class="win" aria-label="Sections"><div class="body" style="padding:12px 16px;gap:10px"><div class="row">
- <a class="btn" href="#wins">Receipts</a><a class="btn" href="#cs">Data case study</a><a class="btn" href="#sq">SQL</a><a class="btn" href="#mk">Marketing</a><a class="btn" href="#gl">Creative</a><a class="btn" href="#ac">Academic</a><a class="btn" href="#ed">Education</a></div>
- <div class="row"><a class="btn" href="https://github.com/Amizingamy/Data-Analytics-Portfolio">GitHub: code and notebooks</a><a class="btn" href="https://public.tableau.com/views/BrewRoomChristmasCampaign/Dashboard1">Tableau dashboard</a><a class="btn" href="https://data-analytics-portfolio-6im4jotwqda9nprm4dutwd.streamlit.app/">Live app: Earthquake Tracker</a></div></div></nav>
-
-<section class="win" id="wins"><div class="bar gold"><i></i><i></i><i></i><b>receipts.jpg: proof, not just claims</b></div>
- <div class="body">
-  <div><p class="kick">Wins</p><h2 style="margin-top:6px">The receipts</h2><p class="lead" style="margin-top:8px">Real documents and photos from the roles above. Click any picture to enlarge.</p></div>
-  <div class="wins">
-   <figure class="polaroid wide" style="margin:0"><img src="img/leaderboard.png" alt="Beyondskool international sales leaderboard, 1 to 27 March 2022, showing Amisha Agarwal in first place" loading="lazy"><p><b>Beyondskool, International sales leaderboard, 1 to 27 March 2022.</b> First place by revenue: ₹11,33,507 in new enrolments from 96 demos. Cropped to my row.</p></figure>
-   <figure class="polaroid tilt1" style="margin:0"><img src="img/siemens-plaque.jpg" alt="Siemens Healthineers DX POC Special Recognition plaque presented to Amisha Agarwal" loading="lazy"><p><b>Siemens Healthineers, DX POC Special Recognition.</b> For organising the DX POC India kickoff in January 2025 from start to finish.</p></figure>
-   <figure class="polaroid tilt2" style="margin:0"><img src="img/poc-recognition.jpg" alt="Recap slide: Special Recognition at DX POC India 2025" loading="lazy"><p><b>POC Day 2025 recap.</b> Slides I put together after the event.</p><img src="img/poc-times.jpg" alt="Recap slide: Times of POC" loading="lazy"></figure>
-   <figure class="polaroid tilt1" style="margin:0"><img src="img/certificate.jpg" alt="SPJain Certificate of Appreciation to Amisha Agarwal, Group Leader, Brand Management and IMC course, Dubai campus, July 2024" loading="lazy"><p><b>SPJain, Certificate of Appreciation.</b> Group Leader in the Brand Management &amp; Integrated Marketing Communications course, Dubai campus, 8 to 18 July 2024. Signed by Dr Tristan Chong, Area Head of Marketing.</p></figure>
-   <figure class="polaroid tilt2" style="margin:0"><img src="img/prof-favourite.jpg" alt="Amisha receiving a gift from her professor under a slide reading Prof's favourite student" loading="lazy"><p><b>“Prof's favourite student.”</b> The class-end shout-out from my Brand Management and IMC professor.</p></figure>
-  </div>
-  <div style="margin-top:14px"><h3 style="font-size:1.25rem">Comics I made for Siemens Healthineers POC</h3><p class="lead" style="margin-top:6px;font-size:.92rem">Short comic-strip explainers for the Point of Care team, each ending with "Drop a Hi for more information" to start a conversation. Problem, then product, then the use case.</p></div>
-  <div class="cards" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))">
-   <figure class="polaroid" style="margin:0"><img src="img/comic-1-problem.jpg" alt="Comic: the daily problems of running separate blood gas and creatinine tests" loading="lazy"><p><b>The problem.</b> Separate machines, multiple samples, waiting on the lab.</p></figure>
-   <figure class="polaroid" style="margin:0"><img src="img/comic-2-epoc.jpg" alt="Comic: Epoc patient-side blood gas analyzer as a one stop solution" loading="lazy"><p><b>The product.</b> Epoc blood gas analyzer, with the specs beside the story.</p></figure>
-   <figure class="polaroid" style="margin:0"><img src="img/comic-3-nicu.jpg" alt="Comic: tiny samples in the NICU, point-of-care blood gas analyzer" loading="lazy"><p><b>The use case.</b> NICU: tiny samples, life saving answers.</p></figure>
-  </div>
- </div></section>
-
-<section class="win" id="cs"><div class="bar teal"><i></i><i></i><i></i><b>case_study.xlsx</b></div>
- <div class="body">
-  <div><p class="kick">Case study</p><h2 style="margin-top:6px">Did the Brew Room Christmas campaign work?</h2>
-  <p class="lead" style="margin-top:8px">I ran this campaign at a café in Mylapore, Chennai. Here I measure the revenue lift, the products behind it, the Instagram effect and loyalty behaviour.</p></div>
-  <div class="note"><b>About the data.</b> The real sales figures are confidential, so the dataset is simulated around the few real numbers I can share (about ₹5,00,000 from hampers, about 20 loyalty sign-ups, about 6,000 organic reach). Read the results as a demonstration of method, not as the business's real results.</div>
-  <div class="stats" id="stats"></div>
-  <div class="chart"><p class="t">Daily revenue, 1 to 25 December</p><p class="s">Revenue jumped from the day the campaign started on 13 December.</p><div id="c-daily"></div></div>
-  <div class="grid2">
-    <div class="chart"><p class="t">Campaign revenue by product</p><p class="s">Gifting hampers were about half of it.</p><div id="c-prod"></div></div>
-    <div class="chart"><p class="t">Average reach per Instagram post</p><p class="s">Riddle posts reached about 58% more people.</p><div id="c-ig"></div></div>
-  </div>
-  <div class="grid2">
-    <div class="chart"><p class="t">Average spend per loyalty member (₹)</p><p class="s">Higher tiers spend more. Referrers spend more too.</p><div id="c-tier"></div></div>
-    <div class="chart"><p class="t">Customers vs revenue by RFM segment (%)</p><p class="s">A quarter of customers bring over half the revenue.</p><div id="c-rfm"></div></div>
-  </div>
-  <div class="note"><b>Is the lift real?</b> Average daily revenue rose from ₹20,897 to ₹79,214 (+279%, 95% bootstrap range 222% to 344%). Welch t-test p = 1.1e-07 and Mann-Whitney p = 1.2e-05. Caveat: December demand rises anyway, so with real data I would add a control to separate the campaign from the season. <a href="https://github.com/Amizingamy/Data-Analytics-Portfolio/blob/main/brew-room-campaign-analytics/analysis/campaign_lift_and_rfm.ipynb">Read the full notebook</a>.</div>
- </div></section>
-
-<section class="win" id="sq"><div class="bar ink"><i></i><i></i><i></i><b>queries.sql</b></div>
- <div class="body">
-  <div><p class="kick">SQL</p><h2 style="margin-top:6px">Four of the twelve queries</h2>
-  <p class="lead" style="margin-top:8px">Written in SQLite using CTEs, window functions and conditional aggregation. Each shows the real output. The other eight are in the repo.</p></div>
-  <div class="tabs" role="tablist" id="tabs"></div>
-  <div class="q" id="qbody" role="tabpanel"></div>
- </div></section>
-
-<section class="win" id="mk"><div class="bar"><i></i><i></i><i></i><b>marketing_and_sales.doc</b></div>
- <div class="body">
-  <div><p class="kick">Marketing work</p><h2 style="margin-top:6px">Campaigns and sales, before the analytics</h2>
-  <p class="lead" style="margin-top:8px">The numbers below are from my own roles. The data case study above builds on the first one.</p></div>
-  <div class="cards">
-    <div class="card"><h3>The Brew Room &amp; Bread Boutique</h3><p class="meta">Social Media Consultant, Dec 2022 to Jul 2023</p>
-      <div class="bigs"><span><b>106%</b>net profit increase, festive range</span><span><b>₹5 lakh</b>from Christmas hampers</span><span><b>500 to 6,000+</b>organic views</span></div>
-      <ul><li>Built lifecycle and email campaigns for the festive product range.</li><li>Ran a Christmas Scavenger Hunt that drove the hamper sales.</li><li>Designed a content framework that raised daily retail closures by 50%, to about ₹1.5 lakh a day.</li></ul></div>
-    <div class="card"><h3>The Duchess Club, Chennai</h3><p class="meta">Marketing Consultant (freelance), 2019 to 2021 and 2022 to 2023</p>
-      <div class="bigs"><span><b>100+</b>brands</span><span><b>93%</b>stall-owner satisfaction</span></div>
-      <ul><li>Social media visibility and visual styling for brands in fashion, beauty, home decor, FMCG and lifestyle.</li><li>Directed social content for the Duchess Utsav events and worked with influencers, TV and news partners on PR.</li><li>Managed Instagram, Facebook, WhatsApp and email marketing.</li></ul></div>
-    <div class="card"><h3>Beyondskool (EdTech)</h3><p class="meta">Leadership Communication Teacher, then Sales Manager, Dec 2021 to Jun 2022</p>
-      <div class="bigs"><span><b>₹1 crore</b>revenue in 4 months</span><span><b>68%</b>demo-to-enrollment</span></div>
-      <ul><li>Taught leadership communication (Dec to Feb), then was promoted to Sales Manager.</li><li>Ran the consumer sales pipeline in LeadSquared across the UK, US, Australia and New Zealand.</li><li>Ranked first on the international sales leaderboard in March 2022 (see the receipts above).</li></ul></div>
-    <div class="card"><h3>Siemens Healthineers</h3><p class="meta">Management Trainee, Point of Care division, Nov 2024 to Jun 2025</p>
-      <ul><li>Built a data-driven go-to-market plan to enter untapped B2B sectors.</li><li>Led internal brand communication and multimedia content for complex medical products.</li><li>Ranked 1st in product domain training.</li><li>Special Recognition for organising the DX POC India kickoff end to end, January 2025.</li></ul></div>
-    <div class="card"><h3>Agarwals &amp; Sons</h3><p class="meta">Marketing Manager, Jun 2025 to present</p>
-      <ul><li>Built Tableau and Power BI dashboards to track marketing KPIs.</li><li>Co-designed and launched the company website.</li><li>Ran market research for sales and managed WhatsApp and email campaigns.</li></ul></div>
-  </div>
- </div></section>
-
-<section class="win" id="gl"><div class="bar teal"><i></i><i></i><i></i><b>my_creative_work (folder)</b></div>
- <div class="body">
-  <div><p class="kick">Creative work</p><h2 style="margin-top:6px">Content I created and ran</h2>
-  <p class="lead" style="margin-top:8px">Posts, menus, invites, posters and handmade pieces. Shared with the brands' permission. Filter by where it came from.</p></div>
-  <div class="filters" id="filters"><button class="f" data-c="all" aria-pressed="true">All</button><button class="f" data-c="brew" aria-pressed="false">Brew Room</button><button class="f" data-c="duchess" aria-pressed="false">Duchess Utsav</button><button class="f" data-c="design" aria-pressed="false">Design and handmade</button></div>
-  <div class="gal" id="gal">
-   <figure class="shot" data-c="design"><img src="img/microgreens.jpg" alt="How to grow microgreens card for Anju's Garden" loading="lazy"><figcaption><b>Microgreens how-to card</b><span>Designed for a client, Anju's Garden, and used by them</span></figcaption></figure>
-   <figure class="shot" data-c="brew"><img src="img/hot-chocolate-board.jpg" alt="Christmas hot chocolate board" loading="lazy"><figcaption><b>Christmas hot chocolate board</b><span>Festive product shot</span></figcaption></figure>
-   <figure class="shot" data-c="duchess"><img src="img/duchess-nac.jpg" alt="Duchess Utsav collage with NAC Jewellers" loading="lazy"><figcaption><b>Duchess Utsav x NAC Jewellers</b><span>Event collage</span></figcaption></figure>
-   <figure class="shot" data-c="design"><img src="img/valentines-scrapbook.jpg" alt="Handmade Valentine's scrapbook collage" loading="lazy"><figcaption><b>Handmade scrapbook collage</b><span>Paper, stickers and hand lettering</span></figcaption></figure>
-   <figure class="shot" data-c="brew"><img src="img/staff-spotlight.jpg" alt="Brew Room staff spotlight post" loading="lazy"><figcaption><b>Staff Spotlight series</b><span>Team culture content</span></figcaption></figure>
-   <figure class="shot" data-c="brew"><img src="img/giveaway.jpg" alt="Picnic giveaway post" loading="lazy"><figcaption><b>Picnic giveaway post</b><span>Giveaway creative</span></figcaption></figure>
-   <figure class="shot" data-c="duchess"><img src="img/duchess-vibe.jpg" alt="Duchess Utsav Vibe in Style post" loading="lazy"><figcaption><b>Vibe in Style</b><span>Brand feature for a Duchess stall</span></figcaption></figure>
-   <figure class="shot" data-c="brew"><img src="img/cupcake-tree.jpg" alt="Christmas cupcake tree" loading="lazy"><figcaption><b>Christmas cupcake tree</b><span>Festive product post</span></figcaption></figure>
-   <figure class="shot" data-c="brew"><img src="img/xmas-invite.jpg" alt="Christmas brunch invite" loading="lazy"><figcaption><b>Christmas brunch invite</b><span>Event invite design</span></figcaption></figure>
-   <figure class="shot" data-c="duchess"><img src="img/duchess-beyou.jpg" alt="Duchess Utsav Be You collage" loading="lazy"><figcaption><b>Be You</b><span>Reel-style collage</span></figcaption></figure>
-   <figure class="shot" data-c="brew"><img src="img/xmas-menu.jpg" alt="Christmas brunch menu" loading="lazy"><figcaption><b>Christmas brunch menu</b><span>Menu design</span></figcaption></figure>
-   <figure class="shot" data-c="design"><img src="img/priyanka-hair.jpg" alt="New hair reveal social post" loading="lazy"><figcaption><b>New hair reveal</b><span>Social post layout</span></figcaption></figure>
-   <figure class="shot" data-c="brew"><img src="img/insta-grid.jpg" alt="Instagram content grid" loading="lazy"><figcaption><b>Instagram content grid</b><span>Feed planning</span></figcaption></figure>
-   <figure class="shot" data-c="brew"><img src="img/valentines-menu.jpg" alt="Valentine's menu" loading="lazy"><figcaption><b>Valentine's menu</b><span>Menu design</span></figcaption></figure>
-   <figure class="shot" data-c="brew"><img src="img/valentines-treats.jpg" alt="Valentine's treats" loading="lazy"><figcaption><b>Valentine's treats</b><span>Seasonal post</span></figcaption></figure>
-   <figure class="shot" data-c="brew"><img src="img/vote-poster.jpg" alt="Vote for us poster" loading="lazy"><figcaption><b>Vote for us poster</b><span>Campaign poster</span></figcaption></figure>
-   <figure class="shot" data-c="brew"><img src="img/bread-boutique.jpg" alt="Bread Boutique collage" loading="lazy"><figcaption><b>Bread Boutique collage</b><span>Brand creative</span></figcaption></figure>
-  </div>
- </div></section>
-
-<section class="win" id="ac"><div class="bar gold"><i></i><i></i><i></i><b>mba_coursework.pdf</b></div>
- <div class="body">
-  <div><p class="kick">Academic data projects</p><h2 style="margin-top:6px">Coursework from my MBA</h2>
-  <p class="lead" style="margin-top:8px">Projects from SPJain Global. The Ve-Glam dataset is synthetic, so read it as a demonstration of method.</p></div>
-  <div class="card"><h3>Ve-Glam: customer segmentation for a vegan cosmetics e-commerce platform</h3><p class="meta">Data Analytics, SPJain Global, individual project. Tools: Python (to generate and clean the data), JMP</p>
-    <ul><li>Set two business goals: raise awareness by 15% and raise sales by 20% through better product recommendations and less cart abandonment.</li>
-    <li>Built a synthetic customer dataset for three UAE emirates (Dubai, Abu Dhabi, Sharjah), then ran RFM analysis, association rule mining and K-means clustering (4 segments).</li>
-    <li>Turned the segments into actions: premium bundles for infrequent high spenders, loyalty rewards for frequent low spenders, education content and influencer reviews for researchers, budget offers for price-sensitive buyers.</li>
-    <li>Used cart-abandonment, seasonality and brand-by-location charts to decide when and where to run offers.</li></ul>
-    <div class="gal" style="margin-top:6px">
-      <figure class="shot"><img src="img/veglam-rules.jpg" alt="Association rules table" loading="lazy"><figcaption><b>Association rules</b><span>Products bought together, with confidence and lift</span></figcaption></figure>
-      <figure class="shot"><img src="img/veglam-clusters.jpg" alt="K-means cluster summary" loading="lazy"><figcaption><b>K-means, 4 segments</b><span>Cluster means for time on page, frequency and spend</span></figcaption></figure>
-      <figure class="shot"><img src="img/veglam-season.jpg" alt="Purchase frequency by location and season" loading="lazy"><figcaption><b>Purchase frequency by season</b><span>Across the three locations</span></figcaption></figure>
-      <figure class="shot"><img src="img/veglam-abandon.jpg" alt="Cart abandonment by brand and location" loading="lazy"><figcaption><b>Cart abandonment</b><span>By brand and location</span></figcaption></figure>
-    </div></div>
-  <div class="card"><h3>Dissertation: Gen Z's ethical views on Google's AI-powered ads and consumer neuroscience</h3><p class="meta">International Business Research, SPJain Global, 2023 to 2024. Singapore and Dubai</p>
-    <ul><li>Surveyed 315 Gen Z consumers (232 in Dubai, 83 in Singapore) and interviewed 20 consumers plus industry experts in marketing.</li>
-    <li>Tested hypotheses with descriptive statistics, t-tests, ANOVA and multiple regression. Awareness differed significantly between Singapore and Dubai (t = 2.76, p = 0.006), and perceptions varied with how much people value ethical standards (ANOVA F = 3.51, p = 0.008).</li>
-    <li>Found high awareness of AI-driven neuromarketing (mean 7.22 out of 9) alongside privacy and trust concerns, and recommended a balanced, transparent approach.</li></ul></div>
-  <div class="card"><h3>Crate &amp; Barrel Gift Registry: concept mockups</h3><p class="meta">Consulting project for Majid Al Futtaim's Crate &amp; Barrel in the UAE, SPJain Global</p>
-    <ul><li>Concept visuals for a flexible gift registry: pieces at every price point, a "gift ladder" from a first step to the dream home, and mood boards for a wedding and an autumn nursery.</li></ul>
-    <div class="gal" style="margin-top:6px">
-      <figure class="shot"><img src="img/cb-build-home.jpg" alt="Concept: Build your home, piece by piece" loading="lazy"><figcaption><b>Build your home, piece by piece</b><span>Every piece fits a budget</span></figcaption></figure>
-      <figure class="shot"><img src="img/cb-gift-ladder.jpg" alt="Concept: The Gift Ladder" loading="lazy"><figcaption><b>The Gift Ladder</b><span>Registry for every step</span></figcaption></figure>
-      <figure class="shot"><img src="img/cb-moodboard-wedding.jpg" alt="Wedding mood board in blue and grey" loading="lazy"><figcaption><b>Wedding mood board</b><span>Balance of blue and grey</span></figcaption></figure>
-      <figure class="shot"><img src="img/cb-moodboard-nursery.jpg" alt="Autumn baby nursery mood board" loading="lazy"><figcaption><b>Nursery mood board</b><span>Balance of orange and white</span></figcaption></figure>
-    </div>
-    <p class="meta">Concept mockups made for coursework. Crate &amp; Barrel names, logos and product images belong to their owners.</p></div>
- </div></section>
-
-<section class="win" id="rc"><div class="bar"><i></i><i></i><i></i><b>guestbook.txt</b></div>
- <div class="body">
-  <div><p class="kick">Recommendations</p><h2 style="margin-top:6px">What the people I worked with said</h2></div>
-  <div class="cards">
-    <div class="card"><p>“What sets Amisha apart is her ability to generate innovative marketing ideas and her knack for staying in sync with the latest trends. This has significantly boosted sales and increased engagement.”</p><p class="meta">Nina Reddy, Joint Managing Director, Savera Hotel and Brew Room (letter, 29 Sep 2023)</p></div>
-    <div class="card"><p>“Her insights and recommendations significantly improved our online engagement.”</p><p class="meta">The Duchess Club founders, on Duchess Utsav 2023 (letter, 2023)</p></div>
-    <div class="card"><p>“Amisha Agarwal's dedication, creativity, patience and commitment were invaluable assets to Duchess Club in the last 4 years.”</p><p class="meta">The Duchess Club founders (letter, 2023)</p></div>
-  </div>
-  <p class="note">Original letters are available on request.</p>
- </div></section>
-
-<section class="win" id="ed"><div class="bar teal"><i></i><i></i><i></i><b>education_and_certs.txt</b></div>
- <div class="body">
-  <div><p class="kick">Education</p><h2 style="margin-top:6px">Where I studied</h2></div>
-  <div class="cards">
-    <div class="card"><h3>Master of Global Business, Global Marketing Management</h3><p class="meta">SPJain School of Global Management, Dubai and Singapore, 2023 to 2025</p>
-      <ul><li>Dean's List, Terms 2 and 3.</li><li>Head of the Academic Committee and part of the Interface Projects Community.</li><li>Consultant on Majid Al Futtaim's Crate &amp; Barrel Gift Registry in the UAE.</li><li>Recognised in Python Programming for exploratory data analysis.</li></ul></div>
-    <div class="card"><h3>BA, Culinary Arts and Catering Technology</h3><p class="meta">Culinary Academy of India, Hyderabad, 2018 to 2021</p>
-      <ul><li>First Division, GPA 8.13.</li><li>Editor of the college newsletter.</li><li>Took part in the Guinness World Record for the largest bread display, 2018.</li></ul></div>
-  </div>
-  <div class="card"><h3>Certifications</h3><ul><li><a href="https://www.coursera.org/account/accomplishments/specialization/V67OG2KR2HJY">Introduction to Generative AI Learning Path Specialization</a> <span class="meta">Google Cloud, Oct 2024</span></li><li><a href="https://www.coursera.org/account/accomplishments/records/GSR7QQY7AYVN">Responsible AI: Applying AI Principles with Google Cloud</a> <span class="meta">Google Cloud, Oct 2024</span></li><li><a href="https://www.coursera.org/account/accomplishments/records/4E4I60QLM0QE">Introduction to Responsible AI</a> <span class="meta">Google Cloud, Sep 2024</span></li><li><a href="https://www.coursera.org/account/accomplishments/records/68SMJJP9BR8U">Introduction to Large Language Models</a> <span class="meta">Google Cloud, Sep 2024</span></li><li><a href="https://www.coursera.org/account/accomplishments/records/8K16FPB61D46">Introduction to Generative AI</a> <span class="meta">Google Cloud, Sep 2024</span></li><li><a href="https://www.coursera.org/account/accomplishments/records/9WR3YO76N1P6">Marketing Analytics Foundation</a> <span class="meta">Meta, Sep 2024</span></li><li><a href="https://www.coursera.org/account/accomplishments/records/H8H2P0IGY94F">Integrated Marketing Communications: Advertising, Public Relations, Digital Marketing and more</a> <span class="meta">IE Business School, Sep 2024</span></li><li><a href="https://www.coursera.org/account/accomplishments/records/P5YFJ1TJQQ4I">Google Ads for Beginners</a> <span class="meta">Coursera Project Network, Sep 2024</span></li><li>Google Foundations of Digital Marketing and E-Commerce; Google Foundations of Project Management; Python Programming (SPJain); Power BI (college certificate)</li></ul></div>
-  <div><p class="kick">Toolkit</p><h2 style="margin:6px 0 12px;font-size:1.3rem">What I work with</h2>
-  <ul class="skills"><li>SQL (SQLite)</li><li>Python</li><li>pandas</li><li>scipy</li><li>matplotlib</li><li>Plotly</li><li>Streamlit</li><li>Tableau</li><li>Power BI</li><li>Power Query (M)</li><li>Google Analytics</li><li>Meta Ads</li><li>Google Ads</li><li>SEMrush</li><li>LeadSquared</li><li>Statistical testing</li><li>RFM segmentation</li><li>Jupyter</li></ul></div>
-  <p class="note"><b>Data cleaning:</b> I cleaned the messy Brew Room exports (mixed dates, <code>Rs</code>/<code>INR</code> amounts, duplicate and test bills) in Power Query, and checked the result against a Python answer key: 2,421 transactions, total ₹12,80,548, 13 Instagram rows, 24 loyalty members. Scripts are in the <code>power-query</code> folder on GitHub.</p>
- </div></section>
-
-<footer><span class="badge">Best viewed with curiosity</span><span>Thanks for stopping by. Source: <a href="https://github.com/Amizingamy/Data-Analytics-Portfolio">github.com/Amizingamy/Data-Analytics-Portfolio</a></span><span>Last updated November 2026</span></footer>
+<section class="stage" aria-label="Flip phone menu">
+<div class="bubble">Ring ring! Press a number to be connected.</div>
+<div class="phone ring" id="phone">
+<div class="lid"><span class="ant"></span><span class="spk"></span><div class="bez"><div class="scr"><div class="sb"><span class="sig"><i></i><i></i><i></i><i></i></span><span>AMISHA</span><span class="bat"></span></div><div class="mt">Main menu</div><ul class="menu" id="menu"><li data-i="0"><b>1</b><span>Data analytics</span></li><li data-i="1"><b>2</b><span>Marketing</span></li><li data-i="2"><b>3</b><span>Creative work</span></li><li data-i="3"><b>4</b><span>Education</span></li><li data-i="4"><b>5</b><span>Receipts</span></li></ul><div class="soft"><span>Select</span><span>Back</span></div></div></div></div>
+<div class="hinge"></div>
+<div class="base"><div class="nav"><button class="call" id="callbtn" aria-label="Call: open selected line">CALL</button><div class="dpad"><button class="u" id="up" aria-label="Up">&#9650;</button><button class="d" id="dn" aria-label="Down">&#9660;</button></div><button class="endc" id="endbtn" aria-label="End: reset">END</button></div><div class="pad"><button class="key act" data-k="1" aria-label="Key 1">1</button><button class="key act" data-k="2" aria-label="Key 2">2</button><button class="key act" data-k="3" aria-label="Key 3">3</button><button class="key act" data-k="4" aria-label="Key 4">4</button><button class="key act" data-k="5" aria-label="Key 5">5</button><button class="key" data-k="6" aria-label="Key 6">6</button><button class="key" data-k="7" aria-label="Key 7">7</button><button class="key" data-k="8" aria-label="Key 8">8</button><button class="key" data-k="9" aria-label="Key 9">9</button><button class="key" data-k="*" aria-label="Key *">*</button><button class="key" data-k="0" aria-label="Key 0">0</button><button class="key" data-k="#" aria-label="Key #">#</button></div></div>
+</div></section>
+</main>
+<footer class="foot"><span>Amisha Agarwal &middot; Chennai</span><span><a href="mailto:a-amisha@outlook.com">a-amisha@outlook.com</a> &middot; <a href="https://github.com/Amizingamy/Data-Analytics-Portfolio">GitHub</a></span></footer>
 </div>
-<div id="lb" role="dialog" aria-label="Image viewer"><img alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><p></p></div>
-
 <script>
-const D={"daily": [["2023-12-01", 24892], ["2023-12-02", 22278], ["2023-12-03", 25759], ["2023-12-04", 19354], ["2023-12-05", 15191], ["2023-12-06", 16125], ["2023-12-07", 18184], ["2023-12-08", 23685], ["2023-12-09", 24267], ["2023-12-10", 22642], ["2023-12-11", 19266], ["2023-12-12", 19120], ["2023-12-13", 59820], ["2023-12-14", 61666], ["2023-12-15", 92943], ["2023-12-16", 73774], ["2023-12-17", 95911], ["2023-12-18", 58466], ["2023-12-19", 64991], ["2023-12-20", 62037], ["2023-12-21", 67448], ["2023-12-22", 95171], ["2023-12-23", 102176], ["2023-12-24", 118822], ["2023-12-25", 76560]], "prod": [["Gifting Hampers", 499998], ["Plum Cake", 158798], ["Christmas Truffles", 132266], ["Christmas Cupcake Tree", 103373], ["Hot Chocolate Board", 68624], ["Regular Menu", 66726]], "q3": {"title": "Which products earned the most during the campaign, and what share of revenue is each?", "sql": "SELECT\n    RANK() OVER (ORDER BY SUM(revenue) DESC)                      AS revenue_rank,\n    product,\n    SUM(revenue)                                                  AS revenue,\n    SUM(units_sold)                                               AS units,\n    ROUND(SUM(revenue) * 100.0 / SUM(SUM(revenue)) OVER (), 1)    AS pct_of_campaign_revenue\nFROM daily_sales\nWHERE campaign_period LIKE 'Campaign%'\nGROUP BY product\nORDER BY revenue_rank;", "cols": ["revenue_rank", "product", "revenue", "units", "pct_of_campaign_revenue"], "rows": [[1, "Gifting Hampers", 499998, 345, 48.6], [2, "Plum Cake", 158798, 352, 15.4], [3, "Christmas Truffles", 132266, 413, 12.8], [4, "Christmas Cupcake Tree", 103373, 575, 10.0], [5, "Hot Chocolate Board", 68624, 266, 6.7], [6, "Regular Menu", 66726, 289, 6.5]]}, "q8": {"title": "Did Instagram riddle posts reach and engage more people than other posts?", "sql": "SELECT\n    CASE WHEN post_theme LIKE '%Riddle%' THEN 'Riddle post' ELSE 'Other post' END AS post_type,\n    COUNT(*)                          AS posts,\n    ROUND(AVG(reach))                 AS avg_reach,\n    ROUND(AVG(saves), 1)              AS avg_saves,\n    ROUND(AVG(story_replies), 1)      AS avg_story_replies\nFROM instagram_engagement\nGROUP BY post_type;", "cols": ["post_type", "posts", "avg_reach", "avg_saves", "avg_story_replies"], "rows": [["Other post", 10, 429.0, 9.9, 6.4], ["Riddle post", 3, 679.0, 13.7, 25.3]]}, "q10": {"title": "How do loyalty tiers compare on visits, spend and rewards redeemed?", "sql": "SELECT\n    tier,\n    COUNT(*)                                                      AS members,\n    ROUND(AVG(visits_post_signup), 1)                             AS avg_visits,\n    ROUND(AVG(total_spend_post_signup))                           AS avg_spend,\n    ROUND(SUM(redeemed_reward) * 100.0 / COUNT(*), 0)\n                                                                  AS pct_redeemed\nFROM loyalty_members\nGROUP BY tier\nORDER BY avg_spend DESC;", "cols": ["tier", "members", "avg_visits", "avg_spend", "pct_redeemed"], "rows": [["Gold", 4, 9.3, 4299.0, 50.0], ["Silver", 8, 6.4, 2864.0, 88.0], ["Bronze", 12, 4.3, 1691.0, 58.0]]}, "q12": {"title": "Do members who referred a friend spend more than those who did not?", "sql": "SELECT\n    referred_a_friend,\n    COUNT(*)                              AS members,\n    ROUND(AVG(total_spend_post_signup))   AS avg_spend,\n    ROUND(AVG(visits_post_signup), 1)     AS avg_visits\nFROM loyalty_members\nGROUP BY referred_a_friend;", "cols": ["referred_a_friend", "members", "avg_spend", "avg_visits"], "rows": [[0.0, 17.0, 2109.0, 5.1], [1.0, 7.0, 3507.0, 7.7]]}};
-const inr=n=>'₹'+Math.round(n).toLocaleString('en-IN');
-function svg(w,h,body){return `<svg viewBox="0 0 ${w} ${h}" role="img">${body}</svg>`}
-const A='var(--accent)',G='var(--grey)';
-/* ---------- charts ---------- */
-const camp=D.daily.filter(r=>r[0]>='2023-12-13').reduce((a,r)=>a+r[1],0);
-document.getElementById('stats').innerHTML=[['+279%','daily revenue lift'],[inr(79214),'avg per campaign day'],[inr(camp),'campaign revenue'],['49%','from gifting hampers']].map(x=>`<div class="stat"><b>${x[0]}</b><span>${x[1]}</span></div>`).join('');
-(function(){const d=D.daily,W=720,H=280,l=46,b=28,t=30,r=8,max=Math.max(...d.map(x=>x[1])),bw=(W-l-r)/d.length;
-let s='';[0,50000,100000,150000].forEach(v=>{const y=H-b-(H-b-t)*v/max;if(y>=t-1)s+=`<line class="ax" x1="${l}" x2="${W-r}" y1="${y}" y2="${y}"/><text x="${l-6}" y="${y+4}" text-anchor="end">${v/1000}k</text>`});
-d.forEach((x,i)=>{const h=(H-b-t)*x[1]/max,xx=l+i*bw+bw*.15,c=x[0]>='2023-12-13';s+=`<rect x="${xx}" y="${H-b-h}" width="${bw*.7}" height="${h}" rx="2" fill="${c?A:G}"><title>${x[0]}: ${inr(x[1])}</title></rect>`;
-if(i%4==0||i==d.length-1)s+=`<text x="${xx+bw*.35}" y="${H-10}" text-anchor="middle">${+x[0].slice(8)} Dec</text>`});
-s+=`<text x="${l+4}" y="${t-14}" style="font-weight:600">Before: avg ₹20,897 a day</text><text x="${l+bw*12+4}" y="${t-14}" class="v" style="fill:var(--accent)">During: avg ₹79,214 a day</text>`;
-document.getElementById('c-daily').innerHTML=svg(W,H,s)})();
-function hbars(id,rows,fmt,hi,lw){const W=360,rh=34,l=lw,r=70,max=Math.max(...rows.map(x=>x[1]));let s='';
-rows.forEach((x,i)=>{const y=i*rh+4,w=(W-l-r)*x[1]/max;s+=`<text x="${l-8}" y="${y+16}" text-anchor="end">${x[0]}</text><rect x="${l}" y="${y+4}" width="${w}" height="18" rx="3" fill="${i==hi?A:G}"/><text class="v" x="${l+w+6}" y="${y+17}">${fmt(x[1])}</text>`});
-document.getElementById(id).innerHTML=svg(W,rows.length*rh+8,s)}
-hbars('c-prod',D.prod.map(x=>[x[0].replace('Christmas ','Xmas '),x[1]]),v=>inr(v/1000)+'k',0,150);
-hbars('c-ig',D.q8.rows.map(x=>[x[0],x[2]]).reverse(),v=>v.toLocaleString('en-IN'),0,92);
-(function(){const rows=[...D.q10.rows].reverse().map(x=>[x[0],x[3]]);hbars('c-tier',rows,v=>inr(v),2,62)})();
-(function(){const seg=[['Champions',25,54],['At risk',15,12],['Occasional',32,9]],W=360,rh=62,l=88;let s='';
-seg.forEach((x,i)=>{const y=i*rh+4;s+=`<text x="${l-8}" y="${y+20}" text-anchor="end">${x[0]}</text>
-<rect x="${l}" y="${y+4}" width="${x[1]*2.8}" height="15" rx="3" fill="${G}"/><text x="${l+x[1]*2.8+5}" y="${y+16}">${x[1]}% of customers</text>
-<rect x="${l}" y="${y+26}" width="${x[2]*2.8}" height="15" rx="3" fill="${A}"/><text class="v" x="${l+x[2]*2.8+5}" y="${y+38}">${x[2]}% of revenue</text>`});
-document.getElementById('c-rfm').innerHTML=svg(W,seg.length*rh+6,s)})();
-const names={q3:'Product ranking',q8:'Instagram riddles',q10:'Loyalty tiers',q12:'Referrals'},keys=Object.keys(names);
-function show(k){document.querySelectorAll('#tabs button').forEach(b=>b.setAttribute('aria-selected',b.dataset.k==k));const q=D[k];
-const esc=t=>t.replace(/&/g,'&amp;').replace(/</g,'&lt;');
-document.getElementById('qbody').innerHTML=`<h3>${esc(q.title)}</h3><pre><code>${esc(q.sql)}</code></pre><div class="tw"><table><thead><tr>${q.cols.map(c=>`<th>${c.replace(/_/g,' ')}</th>`).join('')}</tr></thead><tbody>${q.rows.map(r=>`<tr>${r.map(v=>`<td>${typeof v=='number'?v.toLocaleString('en-IN'):v}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`}
-document.getElementById('tabs').innerHTML=keys.map(k=>`<button role="tab" data-k="${k}">${names[k]}</button>`).join('');
-document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>show(b.dataset.k));show('q3');
-
-/* ---------- record player ---------- */
-const T=[
- {id:'A1',name:'Data & Analytics',sub:'SQL, Python, dashboards',stat:'+279%',blurb:'Daily revenue lift in my Brew Room case study (simulated data, real method): SQL, Python stats, RFM segments and a Tableau dashboard.',tags:['SQL','Python','Tableau','Power BI','Power Query'],imgs:[],href:'#cs',cta:'Open the case study',th:16},
- {id:'A2',name:'Social media & campaigns',sub:'Brew Room, Duchess Utsav',stat:'106%',blurb:'Net profit increase on the Brew Room festive range, with organic views going from 500 to 6,000+. Plus 100+ brands styled at The Duchess Club.',tags:['Instagram','Email','WhatsApp','Meta Ads','Influencers'],imgs:['hot-chocolate-board','staff-spotlight','duchess-nac'],href:'#gl',cta:'See the creative work',th:19},
- {id:'A3',name:'Sales',sub:'Beyondskool, #1 on the leaderboard',stat:'₹1 crore',blurb:'Revenue in four months at Beyondskool across the UK, US, Australia and New Zealand. First place on the international leaderboard in March 2022.',tags:['LeadSquared','Demos','Pipeline','Closing','4 markets'],imgs:['leaderboard'],href:'#wins',cta:'See the leaderboard',th:22},
- {id:'B1',name:'Healthcare B2B',sub:'Siemens Healthineers',stat:'1st',blurb:'In product domain training, then a Special Recognition for organising the DX POC India kickoff end to end. I also wrote comic-strip product explainers for the team.',tags:['Go-to-market','B2B','Brand comms','Events','Point of Care'],imgs:['siemens-plaque','poc-recognition','comic-2-epoc'],href:'#wins',cta:'See the recognition',th:25},
- {id:'B2',name:'Design',sub:'Posters, menus, scrapbooks',stat:'Menus to scrapbooks',blurb:'I design what I market: menus, invites, posters, how-to cards for clients, and handmade scrapbook collages.',tags:['Canva','Hand lettering','Collage','Menus','Posters'],imgs:['microgreens','valentines-scrapbook','xmas-menu'],href:'#gl',cta:'Browse the gallery',th:28},
- {id:'B3',name:'Learning',sub:'MBA, SPJain Global',stat:"Dean's List",blurb:'Master of Global Business in Dubai and Singapore. Group Leader in Brand Management and IMC, plus a dissertation on Gen Z and AI-powered ads.',tags:['MBA','Dissertation','Python','JMP','Group Leader'],imgs:['certificate','prof-favourite'],href:'#ac',cta:'See the coursework',th:31}
-];
-const spots=[[12,8],[50,4],[10,50],[24,74],[88,82]];
-const deck=document.getElementById('deck'),arm=document.getElementById('arm'),head=document.getElementById('head'),chips=document.getElementById('chips'),sleeve=document.getElementById('sleeve'),lcd=document.getElementById('lcd'),pp=document.getElementById('pp'),tl=document.getElementById('tracks');
-const rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
-let cur=-1,playing=false;
-function layoutArm(){const w=deck.clientWidth;arm.querySelector('.rod').style.height=(0.58*w)+'px';head.style.top=(0.58*w-10)+'px'}
-layoutArm();addEventListener('resize',layoutArm);
-function setPlaying(p){playing=p;deck.classList.toggle('on',p&&!rm);pp.textContent=p?'❚❚ Pause':'▶ Play';if(!p)arm.style.transform='rotate(-6deg)';else if(cur>=0)arm.style.transform=`rotate(${T[cur].th}deg)`;lcd.textContent=p&&cur>=0?'♪ '+T[cur].name.toUpperCase():(cur>=0?'PAUSED':'NOW SPINNING')}
-function pick(i,scroll){cur=i;const t=T[i];
- [...tl.children].forEach((b,j)=>b.setAttribute('aria-pressed',j==i));
- setPlaying(true);
- chips.innerHTML=t.tags.map((x,j)=>`<span class="chip" style="left:50%;top:48%;--r:${(j%2?1:-1)*(3+j*2)}deg">${x}</span>`).join('');
- const cs=[...chips.children];
- requestAnimationFrame(()=>requestAnimationFrame(()=>cs.forEach((c,j)=>{c.style.transitionDelay=(rm?0:j*90)+'ms';c.style.left=spots[j][0]+'%';c.style.top=spots[j][1]+'%';c.classList.add('in')})));
- sleeve.classList.remove('pop');void sleeve.offsetWidth;sleeve.classList.add('pop');
- sleeve.innerHTML=`<p class="kick">Now playing · ${t.id} · ${t.sub}</p><div class="big">${t.stat}</div><p>${t.blurb}</p>${t.imgs.length?`<div class="thumbs">${t.imgs.map(n=>`<img src="img/${n}.${n=='leaderboard'?'png':'jpg'}" alt="${n.replace(/-/g,' ')}" loading="lazy">`).join('')}</div>`:''}<div class="row"><a class="btn" href="${t.href}">${t.cta} →</a></div>`;
-}
-tl.innerHTML=T.map((t,i)=>`<button class="trk" aria-pressed="false" data-i="${i}"><b>${t.id}</b><span>${t.name}<small>${t.sub}</small></span></button>`).join('');
-tl.querySelectorAll('.trk').forEach(b=>b.onclick=()=>pick(+b.dataset.i));
-pp.onclick=()=>{if(cur<0)pick(0);else setPlaying(!playing)};
-setTimeout(()=>pick(0),rm?0:700);
-/* ---------- gallery filter + lightbox ---------- */
-document.getElementById('filters').addEventListener('click',e=>{const b=e.target.closest('.f');if(!b)return;
- document.querySelectorAll('#filters .f').forEach(x=>x.setAttribute('aria-pressed',x==b));
- document.querySelectorAll('#gal .shot').forEach(s=>s.hidden=!(b.dataset.c=='all'||s.dataset.c==b.dataset.c))});
-const lb=document.getElementById('lb');
-document.addEventListener('click',e=>{const im=e.target.closest('.shot img,.polaroid img,.thumbs img');if(im){lb.querySelector('img').src=im.src;lb.querySelector('img').alt=im.alt;lb.querySelector('p').textContent=im.alt;lb.classList.add('open');return}
- if(lb.classList.contains('open'))lb.classList.remove('open')});
-addEventListener('keydown',e=>{if(e.key=='Escape')lb.classList.remove('open')});
-</script>
-</body>
-</html>
+(function(){
+var pages=['data', 'marketing', 'creative', 'education', 'receipts'];
+var sel=0,lis=document.querySelectorAll('#menu li'),rows=document.querySelectorAll('#ivr a');
+function set(i){sel=(i+pages.length)%pages.length;lis.forEach(function(l,j){l.classList.toggle('sel',j===sel)});rows.forEach(function(r,j){r.classList.toggle('sel',j===sel)})}
+function go(i){set(i);setTimeout(function(){location.href=pages[sel]+'.html'},260)}
+set(0);
+rows.forEach(function(r,j){r.addEventListener('mouseenter',function(){set(j)});r.addEventListener('focus',function(){set(j)})});
+lis.forEach(function(l,j){l.addEventListener('mouseenter',function(){set(j)});l.addEventListener('click',function(){go(j)})});
+document.querySelectorAll('.key').forEach(function(k){k.addEventListener('click',function(){var n=+k.dataset.k;k.classList.add('down');setTimeout(function(){k.classList.remove('down')},160);if(n>=1&&n<=5)go(n-1);else{var p=document.getElementById('phone');p.classList.remove('ring');void p.offsetWidth;p.classList.add('ring')}})});
+document.getElementById('up').onclick=function(){set(sel-1)};document.getElementById('dn').onclick=function(){set(sel+1)};
+document.getElementById('callbtn').onclick=function(){go(sel)};document.getElementById('endbtn').onclick=function(){set(0)};
+addEventListener('keydown',function(e){if(e.metaKey||e.ctrlKey||e.altKey)return;var n=parseInt(e.key,10);
+ if(n>=1&&n<=5){var k=document.querySelector('.key[data-k="'+n+'"]');k.classList.add('down');setTimeout(function(){k.classList.remove('down')},160);go(n-1)}
+ else if(e.key==='ArrowDown'){e.preventDefault();set(sel+1)}else if(e.key==='ArrowUp'){e.preventDefault();set(sel-1)}});
+})();
+</script></body></html>
