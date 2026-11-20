@@ -67,6 +67,12 @@ h2{font-size:clamp(1.5rem,4.4vw,2rem)}h3{font-size:1.05rem}
 .lcd{position:absolute;right:6%;bottom:4%;z-index:7;background:#1c2a1f;color:#9dfc9d;border:2px solid var(--ink);border-radius:6px;padding:3px 9px;font-family:'Courier New',monospace;font-size:.76rem;max-width:38%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;text-shadow:0 0 6px rgba(120,255,120,.6)}
 h1.name{font-size:clamp(2rem,6vw,3rem);letter-spacing:-.01em}
 h1.name em{font-style:normal;color:var(--tomato)}
+.paths{display:grid;grid-template-columns:repeat(auto-fit,minmax(104px,1fr));gap:10px}
+.path{display:flex;flex-direction:column;gap:1px;text-decoration:none;color:var(--ink)!important;border:2.5px solid var(--ink);border-radius:12px;padding:9px 12px;box-shadow:3px 3px 0 var(--ink);transition:transform .15s}
+.path b{font-family:var(--head);font-size:1.08rem}.path small{font-size:.76rem;color:var(--ink2)}
+.path:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--ink)}.path:active{transform:translate(2px,2px);box-shadow:none}
+.path.a{background:#bfe9e3}.path.b{background:#ffd6c7}.path.c{background:#fbe3a0}
+.path:focus-visible{outline:3px solid var(--tomato);outline-offset:2px}
 .tracks{display:flex;flex-direction:column;gap:7px;margin-top:6px}
 .trk{display:flex;align-items:center;gap:11px;text-align:left;font:inherit;background:#fff;border:2px solid var(--ink);border-radius:9px;padding:7px 11px;cursor:pointer;box-shadow:2px 2px 0 var(--ink);color:var(--ink)}
 .trk b{font-family:'Courier New',monospace;font-size:.8rem;background:var(--ink);color:var(--mustard);border-radius:5px;padding:1px 6px}
@@ -146,6 +152,9 @@ footer{text-align:center;color:var(--ink2);font-size:.82rem;display:flex;flex-di
    <p class="kick">Hello, you've stumbled across my portfolio</p>
    <h1 class="name">Hi, I'm <em>Amisha</em>.</h1>
    <p class="lead">Marketing manager (MBA, Global Marketing Management) moving into data analytics. I run campaigns, then turn campaign questions into SQL, Python and dashboards. Based in Chennai. Drop the needle on whatever you'd like to hear about.</p>
+   <p class="kick" style="margin-top:6px">What would you like to see first?</p>
+   <div class="paths"><a class="path a" href="#cs"><b>Data analytics</b><small>SQL, Python, dashboards</small></a><a class="path b" href="#mk"><b>Marketing</b><small>Campaigns, sales, creative</small></a><a class="path c" href="#ac"><b>Education</b><small>MBA projects, mockups</small></a></div>
+   <p class="kick" style="margin-top:6px">Or drop the needle on a track</p>
    <div class="tracks" id="tracks"></div>
   </div>
   <div class="sleeve" id="sleeve" style="grid-column:1/-1" aria-live="polite"></div>
@@ -266,6 +275,15 @@ footer{text-align:center;color:var(--ink2);font-size:.82rem;display:flex;flex-di
     <ul><li>Surveyed 315 Gen Z consumers (232 in Dubai, 83 in Singapore) and interviewed 20 consumers plus industry experts in marketing.</li>
     <li>Tested hypotheses with descriptive statistics, t-tests, ANOVA and multiple regression. Awareness differed significantly between Singapore and Dubai (t = 2.76, p = 0.006), and perceptions varied with how much people value ethical standards (ANOVA F = 3.51, p = 0.008).</li>
     <li>Found high awareness of AI-driven neuromarketing (mean 7.22 out of 9) alongside privacy and trust concerns, and recommended a balanced, transparent approach.</li></ul></div>
+  <div class="card"><h3>Crate &amp; Barrel Gift Registry: concept mockups</h3><p class="meta">Consulting project for Majid Al Futtaim's Crate &amp; Barrel in the UAE, SPJain Global</p>
+    <ul><li>Concept visuals for a flexible gift registry: pieces at every price point, a "gift ladder" from a first step to the dream home, and mood boards for a wedding and an autumn nursery.</li></ul>
+    <div class="gal" style="margin-top:6px">
+      <figure class="shot"><img src="img/cb-build-home.jpg" alt="Concept: Build your home, piece by piece" loading="lazy"><figcaption><b>Build your home, piece by piece</b><span>Every piece fits a budget</span></figcaption></figure>
+      <figure class="shot"><img src="img/cb-gift-ladder.jpg" alt="Concept: The Gift Ladder" loading="lazy"><figcaption><b>The Gift Ladder</b><span>Registry for every step</span></figcaption></figure>
+      <figure class="shot"><img src="img/cb-moodboard-wedding.jpg" alt="Wedding mood board in blue and grey" loading="lazy"><figcaption><b>Wedding mood board</b><span>Balance of blue and grey</span></figcaption></figure>
+      <figure class="shot"><img src="img/cb-moodboard-nursery.jpg" alt="Autumn baby nursery mood board" loading="lazy"><figcaption><b>Nursery mood board</b><span>Balance of orange and white</span></figcaption></figure>
+    </div>
+    <p class="meta">Concept mockups made for coursework. Crate &amp; Barrel names, logos and product images belong to their owners.</p></div>
  </div></section>
 
 <section class="win" id="rc"><div class="bar"><i></i><i></i><i></i><b>guestbook.txt</b></div>
