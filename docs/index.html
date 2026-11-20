@@ -1,102 +1,189 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Amisha Agarwal | Marketing and Data Portfolio</title>
-<meta name="description" content="Amisha Agarwal: marketing manager moving into data analytics. Campaigns, SQL, Python, dashboards, sales and design. Press a number to explore.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"><link rel="stylesheet" href="style.css">
-<style>
-.hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(24px,5vw,64px);align-items:center;min-height:calc(100vh - 150px);padding:10px 0 40px}
-@media(max-width:860px){.hero{grid-template-columns:1fr;min-height:0}}
-.hello{display:flex;flex-direction:column;gap:20px}
-h1.mega{font-size:clamp(2.8rem,8vw,5.6rem);font-weight:800;letter-spacing:-.045em;line-height:.98}
-.nm{position:relative;color:var(--pink2);white-space:nowrap}
-.nm svg{position:absolute;left:0;bottom:-.14em;width:100%;height:.3em;overflow:visible}
-.nm path{fill:none;stroke:var(--pink);stroke-width:5;stroke-linecap:round;stroke-dasharray:400;stroke-dashoffset:400;animation:draw 1.1s .5s ease forwards}
-@keyframes draw{to{stroke-dashoffset:0}}
-.ivrhead{font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:6px}
-.ivr{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;max-width:460px}
-.ivr a{display:flex;align-items:center;gap:14px;text-decoration:none;background:#fff;border-radius:18px;padding:11px 16px;box-shadow:var(--sh);transition:transform .2s,background .2s,box-shadow .2s}
-.ivr b{display:grid;place-items:center;flex:none;width:34px;height:34px;border-radius:50%;background:var(--blush);color:var(--pink2);font-size:.95rem;transition:background .2s,color .2s}
-.ivr span{flex:1;font-weight:700;line-height:1.3}.ivr small{display:block;font-weight:500;color:var(--muted);font-size:.8rem}
-.ivr i{font-style:normal;color:var(--muted);transition:transform .2s,color .2s}
-.ivr a:hover,.ivr a.sel{transform:translateX(6px);background:var(--ink);}
-.ivr a:hover span,.ivr a.sel span{color:#fff}.ivr a:hover small,.ivr a.sel small{color:#d9c9d1}
-.ivr a:hover b,.ivr a.sel b{background:var(--pink);color:#fff}.ivr a:hover i,.ivr a.sel i{color:#fff;transform:translateX(3px)}
-.hint{font-size:.84rem;color:var(--muted)}
-/* phone */
-.stage{position:relative;display:grid;place-items:center;padding:10px 0 20px}
-.phone{width:min(270px,74vw);position:relative;filter:drop-shadow(0 28px 34px rgba(216,27,122,.28));transform:rotate(-3deg)}
-.lid{position:relative;background:linear-gradient(155deg,#ff86c0,#ff3e9d 55%,#e0237f);border-radius:44px 44px 12px 12px;padding:30px 16px 18px;transform-origin:50% 100%;animation:open 1.1s .25s cubic-bezier(.3,1.3,.5,1) both}
-@keyframes open{from{transform:perspective(900px) rotateX(86deg);opacity:.4}to{transform:perspective(900px) rotateX(0);opacity:1}}
-.ant{position:absolute;top:-16px;right:34px;width:14px;height:26px;border-radius:7px 7px 3px 3px;background:linear-gradient(90deg,#ff5fae,#d81b7a)}
-.ant::after{content:"";position:absolute;top:-4px;left:3px;width:8px;height:8px;border-radius:50%;background:#fff;animation:blink 1.6s infinite}
-@keyframes blink{50%{opacity:.2}}
-.spk{position:absolute;top:11px;left:50%;transform:translateX(-50%);width:46px;height:6px;border-radius:3px;background:rgba(255,255,255,.55)}
-.bez{background:#2a1722;border-radius:18px;padding:8px}
-.scr{background:linear-gradient(180deg,#ffffff,#ffe6f2);border-radius:11px;height:216px;overflow:hidden;display:flex;flex-direction:column;font-size:12px;color:#3a1d2c}
-.sb{display:flex;justify-content:space-between;align-items:center;padding:6px 10px;background:#ff3e9d;color:#fff;font-weight:700;letter-spacing:.06em;font-size:10px}
-.sig{display:inline-flex;gap:2px;align-items:flex-end;height:10px}.sig i{width:3px;background:#fff;border-radius:1px}.sig i:nth-child(1){height:3px}.sig i:nth-child(2){height:5px}.sig i:nth-child(3){height:7px}.sig i:nth-child(4){height:10px}
-.bat{width:18px;height:9px;border:1.5px solid #fff;border-radius:2px;position:relative}.bat::after{content:"";position:absolute;inset:1px;right:3px;background:#fff}
-.mt{padding:6px 10px 2px;font-weight:800;font-size:11px;letter-spacing:.08em;color:#d81b7a;text-transform:uppercase}
-.menu{list-style:none;margin:0;padding:2px 6px;flex:1;display:flex;flex-direction:column;gap:2px}
-.menu li{display:flex;align-items:center;gap:8px;padding:5px 8px;border-radius:7px;font-weight:600;cursor:pointer;transition:background .12s}
-.menu li b{display:grid;place-items:center;width:17px;height:17px;border-radius:50%;background:#ffd0e6;color:#d81b7a;font-size:10px;flex:none}
-.menu li.sel{background:#ff3e9d;color:#fff}.menu li.sel b{background:#fff}
-.soft{display:flex;justify-content:space-between;padding:5px 12px 6px;font-weight:800;font-size:10px;color:#d81b7a;border-top:1px solid #ffc4df}
-.hinge{height:16px;margin:-1px 14px;border-radius:0 0 9px 9px;background:linear-gradient(#d9ccd3,#9a8b94);box-shadow:inset 0 2px 3px rgba(255,255,255,.5)}
-.base{background:linear-gradient(160deg,#ff9fcc,#ff4fa3 60%,#e0237f);border-radius:12px 12px 46px 46px;padding:16px 20px 28px;display:flex;flex-direction:column;gap:12px}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:10px}
-.call,.endc{width:54px;height:30px;border-radius:15px 15px 15px 15px;border:0;color:#fff;font-weight:800;font-size:11px;cursor:pointer;box-shadow:0 3px 0 rgba(0,0,0,.2);font-family:inherit}
-.call{background:#2fc46d}.endc{background:#ff5a5a}
-.dpad{width:60px;height:60px;border-radius:50%;background:radial-gradient(circle at 50% 35%,#fff,#ffd6ea);box-shadow:0 3px 0 rgba(0,0,0,.18);display:grid;place-items:center;position:relative}
-.dpad::after{content:"";width:22px;height:22px;border-radius:50%;background:#ff3e9d;box-shadow:inset 0 2px 3px rgba(255,255,255,.5)}
-.dpad button{position:absolute;border:0;background:none;cursor:pointer;color:#d81b7a;font-size:11px;padding:4px;line-height:1}
-.dpad .u{top:1px;left:50%;transform:translateX(-50%)}.dpad .d{bottom:1px;left:50%;transform:translateX(-50%)}
-.pad{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
-.key{height:30px;border:0;border-radius:11px;background:linear-gradient(#fff,#ffe0ef);color:#7a1a4a;font-weight:800;font-size:14px;font-family:inherit;box-shadow:0 3px 0 rgba(120,20,70,.28);cursor:pointer;transition:transform .08s,box-shadow .08s}
-.key.act{color:#d81b7a}.key.down,.key:active{transform:translateY(3px);box-shadow:0 0 0 rgba(0,0,0,0)}
-.key:not(.act){opacity:.75}
-.bubble{position:absolute;z-index:6;top:0;left:-2%;background:#fff;border-radius:18px 18px 18px 4px;padding:9px 14px;font-weight:700;font-size:.82rem;box-shadow:var(--sh);transform:rotate(-4deg);animation:pop .5s 1.4s both cubic-bezier(.3,1.5,.5,1);max-width:170px;pointer-events:none}
-@keyframes pop{from{opacity:0;transform:scale(.5) rotate(-10deg)}to{opacity:1;transform:rotate(-4deg)}}
-.bubble::after{content:"";position:absolute;bottom:-6px;left:18px;width:14px;height:14px;background:#fff;transform:rotate(45deg);border-radius:0 0 4px 0}
-@media(max-width:860px){.bubble{left:2%}}
-.ring{animation:shake .5s 1.3s 2}
-@keyframes shake{0%,100%{transform:rotate(-3deg)}25%{transform:rotate(-6deg)}75%{transform:rotate(0deg)}}
+<title>Amisha Agarwal | Marketing Studio</title>
+<meta name="description" content="Amisha Agarwal: marketing and data analyst. An interactive studio room: data projects, campaigns, case studies and contact. Switch to Clean List View for the quick read.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap"><style>
+:root{--wall:#FDFBF9;--blush:#F7E6EA;--rose:#D88C9A;--rose2:#9e4d60;--brass:#B8925A;--ink:#2B1E24;--serif:'Playfair Display',Georgia,serif;--sans:'Plus Jakarta Sans',system-ui,sans-serif;--mono:'JetBrains Mono',ui-monospace,Menlo,monospace}
+*{box-sizing:border-box}html,body{margin:0;height:100%}body{background:var(--wall);color:var(--ink);font:400 1rem/1.55 var(--sans);display:flex;flex-direction:column;min-height:100vh}
+a{color:inherit}
+.top{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;padding:10px max(16px,3vw);background:var(--wall);border-bottom:1.5px solid var(--brass);z-index:5}
+.who{display:flex;flex-direction:column;line-height:1.15;text-decoration:none}.who b{font:700 1.3rem var(--serif)}.who span{font:500 .68rem var(--mono);letter-spacing:.06em;text-transform:uppercase;opacity:.7}
+.seg{display:inline-flex;border:1.5px solid var(--brass);border-radius:999px;padding:3px;background:var(--wall)}
+.seg button{font:600 .82rem var(--sans);border:0;background:none;color:var(--ink);padding:7px 15px;border-radius:999px;cursor:pointer}
+.seg button[aria-pressed=true]{background:var(--ink);color:var(--wall)}
+.seg button:focus-visible,.btn:focus-visible,.kb:focus-visible,.chs button:focus-visible{outline:2px solid var(--rose2);outline-offset:2px}
+main{flex:1;display:flex;flex-direction:column;min-height:0}
+#room{flex:1;position:relative;min-height:540px;height:calc(100vh - 62px);overflow:hidden}
+/**/.sc{position:absolute;inset:0}#scene{position:absolute;inset:0;width:100%;height:100%;display:block}
+#scene .ol{stroke:var(--ink);stroke-width:1.8;stroke-linejoin:round;stroke-linecap:round}
+#scene .br{fill:none;stroke:var(--brass);stroke-width:1.5}
+#scene .pn,#scene .pn2{fill:none;stroke:var(--brass);stroke-width:1.5}#scene .pn2{stroke-opacity:.55}
+#scene .pl{stroke:var(--ink);stroke-opacity:.12}
+#scene .ol:not([fill]){fill:none}
+#scene text:not([fill]){fill:var(--ink)}#scene .wl{font:500 italic 24px var(--serif)}#scene .wl.big{font:700 44px var(--serif);font-style:normal}#scene .ws{font:500 12px var(--mono);letter-spacing:.06em;fill:var(--rose2)}
+#scene .serif{font-family:var(--serif)}#scene .mono{font-family:var(--mono)}
+#scene .plq{fill:var(--brass);stroke:var(--ink);stroke-width:1.2}#scene .np{font-size:8.5px;font-weight:700;fill:var(--wall);letter-spacing:.04em}
+#scene .obj{cursor:pointer;transition:transform .28s cubic-bezier(.2,.8,.2,1),filter .28s;outline:none}
+#scene .obj:hover,#scene .obj:focus-visible,#scene .obj.hot{transform:translateY(-5px);filter:drop-shadow(0 0 9px rgba(216,140,154,.75))}
+#scene .obj:focus-visible{filter:drop-shadow(0 0 3px #9e4d60) drop-shadow(0 0 9px rgba(216,140,154,.75))}
+#scene .ch{cursor:pointer;outline:none}#scene .ch rect{fill:var(--wall);stroke:var(--ink);stroke-width:1.5;transition:fill .2s}#scene .ch text{font:700 8.5px var(--mono);fill:var(--ink)}
+#scene .ch:hover rect,#scene .ch.on rect,#scene .ch:focus-visible rect{fill:var(--rose)}
+#knob,#dk{transition:transform .5s cubic-bezier(.3,1.4,.5,1);transform-box:fill-box;transform-origin:center}
+#knobhit:focus-visible circle{stroke:var(--rose2);stroke-width:2}
+.bubble{font:500 11.5px/1.4 var(--sans);background:var(--wall);border:1.5px solid var(--brass);border-radius:12px;padding:8px 11px;color:var(--ink);box-shadow:0 4px 14px rgba(184,146,90,.18);position:relative;display:flex;flex-direction:column;gap:3px;height:100%;justify-content:center}
+.bubble b{font:700 8px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--rose2)}
+.also{position:absolute;left:0;right:0;bottom:10px;text-align:center;font:500 .8rem var(--mono);color:var(--ink);pointer-events:none}.also a{pointer-events:auto;color:var(--rose2);font-weight:700;margin:0 5px}
+/* drawer */
+.ov{position:fixed;inset:0;background:rgba(43,30,36,.32);opacity:0;pointer-events:none;transition:opacity .25s;z-index:20}.ov.on{opacity:1;pointer-events:auto}
+.dr{position:fixed;top:0;right:0;bottom:0;width:min(440px,100%);background:var(--wall);border-left:1.5px solid var(--brass);box-shadow:-18px 0 50px rgba(43,30,36,.14);transform:translateX(104%);transition:transform .32s cubic-bezier(.2,.8,.2,1);z-index:21;display:flex;flex-direction:column;visibility:hidden}
+.dr.on{transform:none;visibility:visible}
+.dr .x{align-self:flex-end;margin:14px 14px 0;width:38px;height:38px;border-radius:50%;border:1.5px solid var(--brass);background:var(--wall);font:600 1.1rem var(--sans);cursor:pointer;color:var(--ink)}
+.dr .x:hover{background:var(--blush)}
+#drb{padding:6px 28px 32px;overflow:auto}
+.eb{font:700 .7rem var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--rose2)}
+#drb h2{font:700 1.9rem/1.12 var(--serif);margin:6px 0 10px;letter-spacing:-.01em}.lede{margin:0 0 16px;color:#4a3a41}
+.kpis{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}.kpis b{font:700 .78rem var(--mono);background:var(--blush);border:1.5px solid var(--brass);color:var(--ink);border-radius:999px;padding:6px 12px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 16px}.tags span{font:500 .7rem var(--mono);color:var(--rose2);border-bottom:1.5px solid var(--rose)}
+.acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.btn{display:inline-flex;align-items:center;font:700 .85rem var(--sans);text-decoration:none;background:var(--ink);color:var(--wall);padding:10px 18px;border-radius:999px;border:0;cursor:pointer;transition:background .2s,transform .2s}.btn:hover{background:var(--rose2);transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--brass)}.btn.ghost:hover{background:var(--blush);color:var(--ink)}
+.fn{font:500 .72rem var(--mono);color:#7b6a71;margin:16px 0 0}
+.ba{list-style:none;margin:0 0 6px;padding:0;display:flex;flex-direction:column;gap:8px}.ba li{display:grid;grid-template-columns:1fr auto auto auto;gap:8px;align-items:center;background:var(--blush);border:1.5px solid var(--brass);border-radius:14px;padding:10px 12px;font-size:.85rem}
+.ba li span{grid-column:1/-1;font-weight:600}.ba b{font:700 .85rem var(--mono)}.ba i{font-style:normal;color:var(--brass)}.ba b.a{color:var(--rose2)}
+.chs{display:flex;gap:8px;margin-bottom:14px}.chs button{font:700 .8rem var(--mono);padding:8px 14px;border-radius:8px;border:1.5px solid var(--ink);background:var(--wall);cursor:pointer}.chs button[aria-selected=true]{background:var(--rose);}
+.tune{display:flex;gap:16px;align-items:center;background:var(--blush);border:1.5px solid var(--brass);border-radius:18px;padding:14px;margin-bottom:10px}.kb{border:0;background:none;padding:0;cursor:pointer;border-radius:50%;flex:none}#dk{transition:transform .5s cubic-bezier(.3,1.4,.5,1)}
+.note{margin:0;font:italic 500 1.05rem/1.4 var(--serif)}.dots{display:flex;gap:6px;margin-bottom:18px}.dots i{width:8px;height:8px;border-radius:50%;border:1.5px solid var(--brass)}.dots i.on{background:var(--rose2);border-color:var(--rose2)}
+.em{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;font:600 .85rem var(--mono);border:1.5px solid var(--brass);border-radius:14px;padding:8px 8px 8px 14px;word-break:break-all}
+/* list */
+#list{display:none;padding:clamp(20px,4vw,48px) max(16px,4vw) 60px;max-width:1100px;margin:0 auto;width:100%}
+.intro h1{font:700 clamp(2rem,6vw,3.4rem)/1.05 var(--serif);margin:0 0 10px;letter-spacing:-.02em}.intro p{max-width:56ch;color:#4a3a41;margin:0 0 28px}
+.lg{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,310px),1fr));gap:18px}
+.lc{border:1.5px solid var(--brass);border-radius:22px;padding:22px;background:#fff;display:flex;flex-direction:column;box-shadow:0 14px 34px rgba(184,146,90,.1)}.lc h3{font:700 1.3rem/1.2 var(--serif);margin:6px 0 8px}.lc p{margin:0;color:#4a3a41;font-size:.92rem}.lc .acts{margin-top:auto;padding-top:14px}
+body.list #room{display:none}body.list #list{display:block}
+.foot{text-align:center;padding:18px;font:500 .75rem var(--mono);opacity:.7}
+@media(max-width:720px){#room{height:auto;min-height:0;display:flex;flex-direction:column}.sc{position:relative;inset:auto;overflow-x:auto;overflow-y:hidden;height:540px;background:linear-gradient(#F7E6EA 0 60px,#FDFBF9 60px)}#scene{position:relative;width:1000px;height:540px;inset:auto}.also{position:static;padding:12px 8px 20px;font-size:.72rem;line-height:1.8}.also::before{content:'Swipe the room sideways ↔';display:block;color:var(--rose2);font-weight:700}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style></head><body>
-<div class="wrap">
-<header class="top"><a class="logo" href="index.html">amisha<span>.</span></a><a class="btn ghost" href="mailto:a-amisha@outlook.com">Say hi</a></header>
-<main class="hero">
-<section class="hello">
-<p class="eyebrow">Marketing &times; Data &middot; Chennai</p>
-<h1 class="mega">Hi, I'm <span class="nm">Amisha<svg viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden="true"><path d="M4 12 C 60 2, 120 18, 180 8 S 270 6, 296 10"/></svg></span>.</h1>
-<p class="sub">I run marketing campaigns, then use SQL, Python and dashboards to prove what worked. Thanks for calling.</p>
-<p class="ivrhead">Please choose a line</p>
-<ol class="ivr" id="ivr"><li><a href="data.html" data-i="0"><b>1</b><span>Data analytics<small>SQL, Python, dashboards</small></span><i aria-hidden="true">→</i></a></li><li><a href="marketing.html" data-i="1"><b>2</b><span>Marketing<small>Campaigns and sales</small></span><i aria-hidden="true">→</i></a></li><li><a href="creative.html" data-i="2"><b>3</b><span>Creative work<small>Posts, comics, scrapbooks</small></span><i aria-hidden="true">→</i></a></li><li><a href="education.html" data-i="3"><b>4</b><span>Education<small>MBA and certifications</small></span><i aria-hidden="true">→</i></a></li><li><a href="receipts.html" data-i="4"><b>5</b><span>Receipts<small>Awards and proof</small></span><i aria-hidden="true">→</i></a></li></ol>
-<p class="hint">Tip: press 1 to 5 on your keyboard, or on the phone.</p>
-</section>
-<section class="stage" aria-label="Flip phone menu">
-<div class="bubble">Ring ring! Press a number to be connected.</div>
-<div class="phone ring" id="phone">
-<div class="lid"><span class="ant"></span><span class="spk"></span><div class="bez"><div class="scr"><div class="sb"><span class="sig"><i></i><i></i><i></i><i></i></span><span>AMISHA</span><span class="bat"></span></div><div class="mt">Main menu</div><ul class="menu" id="menu"><li data-i="0"><b>1</b><span>Data analytics</span></li><li data-i="1"><b>2</b><span>Marketing</span></li><li data-i="2"><b>3</b><span>Creative work</span></li><li data-i="3"><b>4</b><span>Education</span></li><li data-i="4"><b>5</b><span>Receipts</span></li></ul><div class="soft"><span>Select</span><span>Back</span></div></div></div></div>
-<div class="hinge"></div>
-<div class="base"><div class="nav"><button class="call" id="callbtn" aria-label="Call: open selected line">CALL</button><div class="dpad"><button class="u" id="up" aria-label="Up">&#9650;</button><button class="d" id="dn" aria-label="Down">&#9660;</button></div><button class="endc" id="endbtn" aria-label="End: reset">END</button></div><div class="pad"><button class="key act" data-k="1" aria-label="Key 1">1</button><button class="key act" data-k="2" aria-label="Key 2">2</button><button class="key act" data-k="3" aria-label="Key 3">3</button><button class="key act" data-k="4" aria-label="Key 4">4</button><button class="key act" data-k="5" aria-label="Key 5">5</button><button class="key" data-k="6" aria-label="Key 6">6</button><button class="key" data-k="7" aria-label="Key 7">7</button><button class="key" data-k="8" aria-label="Key 8">8</button><button class="key" data-k="9" aria-label="Key 9">9</button><button class="key" data-k="*" aria-label="Key *">*</button><button class="key" data-k="0" aria-label="Key 0">0</button><button class="key" data-k="#" aria-label="Key #">#</button></div></div>
-</div></section>
+<header class="top"><a class="who" href="./"><b>Amisha Agarwal</b><span>Marketing &amp; Data Analyst</span></a>
+<div class="seg" id="seg" role="group" aria-label="View"><button data-v="room" aria-pressed="true">Room View</button><button data-v="list" aria-pressed="false">Clean List View</button></div></header>
+<main>
+<section id="room" aria-label="Marketing studio room"><div class="sc">
+<svg id="scene" viewBox="0 0 1200 640" preserveAspectRatio="xMidYMax meet" style="overflow:visible" role="group" aria-label="Illustrated studio room with four clickable objects">
+<defs>
+<pattern id="dam" width="60" height="60" patternUnits="userSpaceOnUse"><path d="M30 8c6 8 6 14 0 22-6-8-6-14 0-22zM0 38c6 8 6 14 0 22M60 38c-6 8-6 14 0 22" fill="none" stroke="#D88C9A" stroke-opacity=".16" stroke-width="1.2"/><circle cx="30" cy="42" r="2" fill="#B8925A" fill-opacity=".18"/></pattern>
+</defs>
+<rect x="-1200" y="-600" width="3600" height="600" fill="#F7E6EA"/><rect x="-1200" y="0" width="3600" height="548" fill="#FDFBF9"/><rect x="-1200" y="0" width="3600" height="548" fill="url(#dam)"/>
+<rect x="-1200" width="3600" height="28" fill="#F7E6EA"/><line x1="-1200" y1="28" x2="2400" y2="28" class="br"/><line x1="-1200" y1="32" x2="2400" y2="32" class="ol" stroke-width="1"/>
+<line x1="-1200" y1="64" x2="2400" y2="64" class="br" stroke-width="2.5"/>
+<rect x="-1200" y="400" width="3600" height="148" fill="#F7E6EA"/><line x1="-1200" y1="400" x2="2400" y2="400" class="ol" stroke-width="2"/><line x1="-1200" y1="406" x2="2400" y2="406" class="br"/>
+<rect x="-1182" y="418" width="124" height="104" rx="2" class="pn"/><rect x="-1174" y="426" width="108" height="88" rx="1" class="pn2"/><rect x="-1032" y="418" width="124" height="104" rx="2" class="pn"/><rect x="-1024" y="426" width="108" height="88" rx="1" class="pn2"/><rect x="-882" y="418" width="124" height="104" rx="2" class="pn"/><rect x="-874" y="426" width="108" height="88" rx="1" class="pn2"/><rect x="-732" y="418" width="124" height="104" rx="2" class="pn"/><rect x="-724" y="426" width="108" height="88" rx="1" class="pn2"/><rect x="-582" y="418" width="124" height="104" rx="2" class="pn"/><rect x="-574" y="426" width="108" height="88" rx="1" class="pn2"/><rect x="-432" y="418" width="124" height="104" rx="2" class="pn"/><rect x="-424" y="426" width="108" height="88" rx="1" class="pn2"/><rect x="-282" y="418" width="124" height="104" rx="2" class="pn"/><rect x="-274" y="426" width="108" height="88" rx="1" class="pn2"/><rect x="-132" y="418" width="124" height="104" rx="2" class="pn"/><rect x="-124" y="426" width="108" height="88" rx="1" class="pn2"/><rect x="18" y="418" width="124" height="104" rx="2" class="pn"/><rect x="26" y="426" width="108" height="88" rx="1" class="pn2"/><rect x="168" y="418" width="124" height="104" rx="2" class="pn"/><rect x="176" y="426" width="108" height="88" rx="1" class="pn2"/><rect x="318" y="418" width="124" height="104" rx="2" class="pn"/><rect x="326" y="426" width="108" height="88" rx="1" class="pn2"/><rect x="468" y="418" width="124" height="104" rx="2" class="pn"/><rect x="476" y="426" width="108" height="88" rx="1" class="pn2"/><rect x="618" y="418" width="124" height="104" rx="2" class="pn"/><rect x="626" y="426" width="108" height="88" rx="1" class="pn2"/><rect x="768" y="418" width="124" height="104" rx="2" class="pn"/><rect x="776" y="426" width="108" height="88" rx="1" class="pn2"/><rect x="918" y="418" width="124" height="104" rx="2" class="pn"/><rect x="926" y="426" width="108" height="88" rx="1" class="pn2"/><rect x="1068" y="418" width="124" height="104" rx="2" class="pn"/><rect x="1076" y="426" width="108" height="88" rx="1" class="pn2"/><rect x="1218" y="418" width="124" height="104" rx="2" class="pn"/><rect x="1226" y="426" width="108" height="88" rx="1" class="pn2"/><rect x="1368" y="418" width="124" height="104" rx="2" class="pn"/><rect x="1376" y="426" width="108" height="88" rx="1" class="pn2"/><rect x="1518" y="418" width="124" height="104" rx="2" class="pn"/><rect x="1526" y="426" width="108" height="88" rx="1" class="pn2"/><rect x="1668" y="418" width="124" height="104" rx="2" class="pn"/><rect x="1676" y="426" width="108" height="88" rx="1" class="pn2"/><rect x="1818" y="418" width="124" height="104" rx="2" class="pn"/><rect x="1826" y="426" width="108" height="88" rx="1" class="pn2"/><rect x="1968" y="418" width="124" height="104" rx="2" class="pn"/><rect x="1976" y="426" width="108" height="88" rx="1" class="pn2"/><rect x="2118" y="418" width="124" height="104" rx="2" class="pn"/><rect x="2126" y="426" width="108" height="88" rx="1" class="pn2"/><rect x="2268" y="418" width="124" height="104" rx="2" class="pn"/><rect x="2276" y="426" width="108" height="88" rx="1" class="pn2"/>
+<rect x="-1200" y="530" width="3600" height="18" fill="#FDFBF9" class="ol"/>
+<rect x="-1200" y="548" width="3600" height="400" fill="#EBD3D1"/><line x1="-1200" y1="572" x2="2400" y2="572" class="pl"/><line x1="-1200" y1="596" x2="2400" y2="596" class="pl"/><line x1="-1200" y1="620" x2="2400" y2="620" class="pl"/>
+<ellipse cx="600" cy="598" rx="360" ry="30" fill="#D88C9A" fill-opacity=".32" class="br"/><ellipse cx="600" cy="598" rx="320" ry="23" fill="none" class="br" stroke-dasharray="3 5"/>
+<g class="welcome"><text x="52" y="116" class="wl">Welcome to my</text><text x="52" y="156" class="wl big">marketing studio.</text><text x="52" y="188" class="ws">Tap an object to look inside.</text></g>
+
+<!-- DESK + COMPUTER -->
+<g class="obj" id="o-data" tabindex="0" role="button" aria-label="Vintage computer: Data and Analytics. Opens details." data-open="data">
+ <rect x="50" y="432" width="380" height="14" rx="3" fill="#B8925A" fill-opacity=".35" class="ol"/>
+ <rect x="66" y="446" width="348" height="100" fill="#FDFBF9" class="ol"/><rect x="76" y="456" width="150" height="80" rx="2" fill="#F7E6EA" class="br"/><rect x="238" y="456" width="166" height="80" rx="2" fill="#F7E6EA" class="br"/>
+ <circle cx="151" cy="496" r="4" fill="#B8925A" class="ol" stroke-width="1"/><circle cx="321" cy="496" r="4" fill="#B8925A" class="ol" stroke-width="1"/>
+ <rect x="206" y="410" width="68" height="22" rx="3" fill="#F7E6EA" class="ol"/>
+ <rect x="150" y="296" width="180" height="118" rx="16" fill="#FDFBF9" class="ol"/>
+ <rect x="164" y="310" width="152" height="86" rx="10" fill="#2B1E24"/>
+ <g class="scr"><rect x="178" y="364" width="16" height="22" fill="#D88C9A"/><rect x="200" y="350" width="16" height="36" fill="#D88C9A"/><rect x="222" y="336" width="16" height="50" fill="#D88C9A"/><rect x="244" y="322" width="16" height="64" fill="#F7E6EA"/><text x="270" y="334" class="mono" fill="#F7E6EA" font-size="12">+279%</text><text x="270" y="348" class="mono" fill="#D88C9A" font-size="7">SIMULATED</text><rect x="268" y="360" width="38" height="2" fill="#B8925A"/><rect x="268" y="368" width="28" height="2" fill="#B8925A"/><rect x="268" y="376" width="34" height="2" fill="#B8925A"/></g>
+ <circle cx="312" cy="404" r="3" fill="#D88C9A" class="ol" stroke-width="1"/>
+ <rect x="150" y="420" width="130" height="12" rx="3" fill="#FDFBF9" class="ol" transform="translate(0,0)"/><path d="M160 426h110" stroke="#B8925A" stroke-dasharray="3 3" stroke-width="1.5"/>
+ <path d="M84 432c-4-22-2-40 8-54 6 14 8 34 4 54z" fill="#D88C9A" fill-opacity=".5" class="ol"/><rect x="76" y="418" width="28" height="14" rx="2" fill="#FDFBF9" class="ol"/>
+ <rect x="356" y="408" width="30" height="24" rx="4" fill="#FDFBF9" class="ol"/><path d="M386 414c10 0 10 14 0 14" fill="none" class="ol"/>
+ <rect x="160" y="468" width="160" height="24" rx="3" class="plq"/><text x="240" y="484" class="mono np" text-anchor="middle">DATA &amp; ANALYTICS</text>
+</g>
+
+<!-- AD BOARD -->
+<g class="obj" id="o-growth" tabindex="0" role="button" aria-label="Gilded framed ad board: Growth and Campaigns. Opens details." data-open="growth">
+ <path d="M490 112L575 64L660 112" fill="none" class="br"/><circle cx="575" cy="64" r="4" fill="#B8925A" class="ol" stroke-width="1"/>
+ <rect x="455" y="108" width="240" height="196" rx="6" fill="#B8925A" fill-opacity=".28" class="ol" stroke-width="2"/>
+ <rect x="466" y="119" width="218" height="174" rx="3" fill="#FDFBF9" class="br"/>
+ <text x="575" y="148" text-anchor="middle" class="serif" font-size="17" font-style="italic">The Brew Room</text>
+ <line x1="520" y1="158" x2="630" y2="158" class="br"/>
+ <rect x="498" y="262" width="34" height="8" fill="#F7E6EA" class="ol" stroke-width="1"/>
+ <rect x="618" y="180" width="34" height="90" fill="#D88C9A" class="ol" stroke-width="1"/>
+ <text x="515" y="256" text-anchor="middle" class="mono" font-size="11" font-weight="700">500</text><text x="635" y="174" text-anchor="middle" class="mono" font-size="11" font-weight="700">6,000+</text>
+ <path d="M538 252C562 248 586 214 606 190" fill="none" stroke="#B8925A" stroke-width="1.5" stroke-dasharray="4 4"/><path d="M600 186l10 2-4 9" fill="none" class="br"/>
+ <text x="575" y="284" text-anchor="middle" class="mono" font-size="8.5">ORGANIC VIEWS: BEFORE → AFTER</text>
+ <rect x="510" y="312" width="130" height="22" rx="3" class="plq"/><text x="575" y="327" class="mono np" text-anchor="middle">GROWTH &amp; CAMPAIGNS</text>
+</g>
+
+<!-- RADIO -->
+<g class="obj" id="o-radio" tabindex="0" role="button" aria-label="Antique radio: About and Contact. Opens details." data-open="radio">
+ <rect x="728" y="436" width="190" height="12" rx="3" fill="#B8925A" fill-opacity=".35" class="ol"/>
+ <path d="M742 448v84M904 448v84" class="ol" stroke-width="4"/><rect x="742" y="488" width="162" height="6" fill="#B8925A" fill-opacity=".35" class="ol" stroke-width="1"/>
+ <rect x="752" y="338" width="138" height="98" rx="14" fill="#F7E6EA" class="ol"/>
+ <rect x="764" y="352" width="56" height="70" rx="6" fill="#FDFBF9" class="ol"/>
+ <g stroke="#2B1E24" stroke-width="1.2" stroke-opacity=".7"><line x1="772" y1="360" x2="772" y2="414"/><line x1="780" y1="360" x2="780" y2="414"/><line x1="788" y1="360" x2="788" y2="414"/><line x1="796" y1="360" x2="796" y2="414"/><line x1="804" y1="360" x2="804" y2="414"/><line x1="812" y1="360" x2="812" y2="414"/></g>
+ <rect x="830" y="352" width="48" height="22" rx="4" fill="#FDFBF9" class="ol"/><line x1="836" y1="366" x2="872" y2="366" class="br" stroke-width="1"/><line id="needle" x1="846" y1="356" x2="846" y2="372" stroke="#D88C9A" stroke-width="2"/>
+ <circle cx="854" cy="404" r="15" fill="#B8925A" class="ol" id="knobbase"/><g id="knob"><circle cx="854" cy="404" r="10" fill="#FDFBF9" class="ol"/><line x1="854" y1="404" x2="854" y2="396" class="ol" stroke-width="2.5"/></g>
+ <path d="M766 338L752 296M876 338L896 292" class="ol" stroke-width="1.5"/>
+ <rect x="745" y="508" width="150" height="22" rx="3" class="plq"/><text x="820" y="523" class="mono np" text-anchor="middle">ABOUT &amp; CONTACT</text>
+</g>
+<g id="knobhit" tabindex="0" role="button" aria-label="Tune the radio: next note" style="cursor:pointer"><circle cx="854" cy="404" r="18" fill="transparent"/></g>
+<foreignObject x="736" y="196" width="180" height="104" id="bubblefo"><div xmlns="http://www.w3.org/1999/xhtml" class="bubble" id="bubble" aria-live="polite"><b>On air</b><span id="bnote">Turn the knob to tune in.</span></div></foreignObject>
+
+<!-- TV -->
+<g class="obj" id="o-tv" tabindex="0" role="button" aria-label="Retro parlor TV: Featured Case Study. Opens full details." data-open="tv">
+ <path d="M1050 332L1018 276M1050 332L1086 270" class="ol" stroke-width="2" fill="none"/><circle cx="1018" cy="276" r="3" fill="#B8925A" class="ol" stroke-width="1"/><circle cx="1086" cy="270" r="3" fill="#B8925A" class="ol" stroke-width="1"/>
+ <path d="M978 470L962 546M1122 470L1138 546" class="ol" stroke-width="5"/>
+ <rect x="946" y="330" width="208" height="142" rx="18" fill="#F7E6EA" class="ol" stroke-width="2"/><rect x="952" y="336" width="196" height="130" rx="14" fill="none" class="br"/>
+ <rect x="966" y="344" width="132" height="116" rx="16" fill="#2B1E24"/>
+ <g id="tvscr"><text x="980" y="368" class="mono" font-size="8" fill="#D88C9A" id="tv1">CH 01 · ON AIR</text><text x="980" y="394" class="serif" font-size="17" fill="#FDFBF9" id="tv2">Brew Room</text><text x="980" y="412" class="serif" font-size="10" fill="#F7E6EA" font-style="italic" id="tv3">Did the campaign work?</text><text x="980" y="440" class="mono" font-size="13" font-weight="700" fill="#D88C9A" id="tv4">+279% lift*</text></g>
+ <rect x="966" y="344" width="132" height="116" rx="16" fill="url(#dam)" opacity=".2"/>
+ <circle cx="1124" cy="352" r="0"/>
+ <circle cx="1124" cy="440" r="7" fill="#B8925A" class="ol" stroke-width="1.5"/><line x1="1124" y1="440" x2="1128" y2="435" class="ol" stroke-width="1.5"/>
+ <rect x="1106" y="456" width="0" height="0"/>
+ <rect x="990" y="490" width="120" height="22" rx="3" class="plq"/><text x="1050" y="505" class="mono np" text-anchor="middle">FEATURED CASE STUDY</text>
+</g>
+<g class="ch" id="ch1" tabindex="0" role="button" aria-label="Channel 01: Brew Room campaign analytics"><rect x="1104" y="364" width="40" height="22" rx="4"/><text x="1124" y="379" text-anchor="middle">CH 01</text></g>
+<g class="ch" id="ch2" tabindex="0" role="button" aria-label="Channel 02: Ve-Glam segmentation"><rect x="1104" y="394" width="40" height="22" rx="4"/><text x="1124" y="409" text-anchor="middle">CH 02</text></g>
+</svg></div>
+<div class="also">Also on the shelves: <a href="creative.html">Creative work</a>·<a href="education.html">Education</a>·<a href="receipts.html">Receipts</a></div></section>
+<section id="list" aria-label="Clean list view"><div class="intro"><h1>Marketing, with the maths to prove it.</h1><p>I'm a marketing manager moving into data analytics. Everything below is a two-sentence summary with a link to the full story.</p></div><div class="lg"><article class="lc"><span class="eb">Data &amp; Analytics</span><h3>Did the campaign actually work?</h3><p>I ran a festive coffee campaign, then tested whether the sales lift was real. The data is simulated for practice, and every query is on GitHub.</p><div class="kpis"><b>+279% daily revenue lift*</b><b>12 SQL queries</b><b>315 survey responses</b></div><div class="acts"><a class="btn " href="data.html">Full details →</a><a class="btn ghost" href="https://github.com/Amizingamy/Data-Analytics-Portfolio/blob/main/brew-room-campaign-analytics/analysis/campaign_lift_and_rfm.ipynb" target="_blank" rel="noopener">Notebook</a></div></article><article class="lc"><span class="eb">Growth &amp; Campaigns</span><h3>Campaigns where the numbers moved.</h3><p>Real work for real brands, from a café reel to ₹1 crore in sales.</p><div class="kpis"><b>500 → 6,000+ organic views</b><b>+106% festive net profit</b><b>₹1 crore in 4 months</b></div><div class="acts"><a class="btn " href="marketing.html">Full details →</a></div></article><article class="lc"><span class="eb">Featured case study · CH 01</span><h3>Brew Room campaign analytics</h3><p>A Christmas campaign tested with SQL, bootstrap and a Tableau dashboard. Dataset is simulated; the method is real.</p><div class="kpis"><b>+279% lift*</b><b>12 SQL queries</b></div><div class="acts"><a class="btn " href="data.html">Full details →</a><a class="btn ghost" href="https://public.tableau.com/views/BrewRoomChristmasCampaign/Dashboard1" target="_blank" rel="noopener">Tableau</a></div></article><article class="lc"><span class="eb">Featured case study · CH 02</span><h3>Ve-Glam customer segmentation</h3><p>K-means on a synthetic vegan cosmetics shop to produce four marketing segments across three emirates.</p><div class="kpis"><b>4 segments</b><b>3 emirates</b></div><div class="acts"><a class="btn " href="data.html#veglam">Full details →</a></div></article><article class="lc"><span class="eb">Creative</span><h3>Posts, comics and scrapbooks</h3><p>Social posts, Siemens comics, handmade designs and client work.</p><div class="kpis"><b>Brew Room</b><b>Duchess Club</b><b>Siemens comics</b></div><div class="acts"><a class="btn " href="creative.html">See the gallery →</a></div></article><article class="lc"><span class="eb">Education</span><h3>MBA, culinary arts and certifications</h3><p>Dean's List at SPJain, Head of Academic Committee, and eight Coursera certificates.</p><div class="kpis"><b>Dean's List T2 + T3</b><b>GPA 8.13 (BA)</b></div><div class="acts"><a class="btn " href="education.html">Full details →</a></div></article><article class="lc"><span class="eb">Receipts</span><h3>Proof, not promises</h3><p>The leaderboard, a Siemens recognition plaque, a certificate and three recommendations.</p><div class="kpis"><b>#1 leaderboard, Mar 2022</b><b>Special Recognition</b></div><div class="acts"><a class="btn " href="receipts.html">Full details →</a></div></article><article class="lc"><span class="eb">About &amp; Contact</span><h3>Say hello</h3><p>Marketing manager moving into data analytics. Based in Chennai.</p><div class="kpis"><b>a-amisha@outlook.com</b></div><div class="acts"><a class="btn " href="https://www.linkedin.com/in/amisha-a-b62669198/" target="_blank" rel="noopener">LinkedIn</a><a class="btn ghost" href="https://github.com/Amizingamy/Data-Analytics-Portfolio" target="_blank" rel="noopener">GitHub</a></div></article></div><p class="fn" style="margin-top:22px">*Simulated dataset, used to practise and show method.</p>
+<p class="fn"><a href="creative.html">Creative</a> · <a href="education.html">Education</a> · <a href="receipts.html">Receipts</a></p></section>
 </main>
-<footer class="foot"><span>Amisha Agarwal &middot; Chennai</span><span><a href="mailto:a-amisha@outlook.com">a-amisha@outlook.com</a> &middot; <a href="https://github.com/Amizingamy/Data-Analytics-Portfolio">GitHub</a></span></footer>
-</div>
+<div class="ov" id="ov"></div>
+<aside class="dr" id="dr" role="dialog" aria-modal="true" aria-label="Details" aria-hidden="true"><button class="x" id="dx" aria-label="Close">✕</button><div id="drb"></div></aside>
+<template id="t-data"><span class="eb">Data &amp; Analytics</span><h2>Did the campaign actually work?</h2><p class="lede">I ran a festive coffee campaign, then tested whether the sales lift was real. The data is simulated for practice, and every query is on GitHub.</p><div class="kpis"><b>+279% daily revenue lift*</b><b>12 SQL queries</b><b>4 customer segments</b><b>315 survey responses</b></div><div class="tags"><span>SQL</span><span>Python</span><span>Tableau</span><span>Power BI</span><span>Power Query</span><span>JMP</span></div><div class="acts"><a class="btn " href="data.html">Full data page →</a><a class="btn ghost" href="https://github.com/Amizingamy/Data-Analytics-Portfolio/blob/main/brew-room-campaign-analytics/analysis/campaign_lift_and_rfm.ipynb" target="_blank" rel="noopener">Notebook</a><a class="btn ghost" href="https://public.tableau.com/views/BrewRoomChristmasCampaign/Dashboard1" target="_blank" rel="noopener">Tableau</a></div><p class="fn">*Simulated dataset. Welch p = 1.1e-07.</p></template><template id="t-growth"><span class="eb">Growth &amp; Campaigns</span><h2>Campaigns where the numbers moved.</h2><p class="lede">Real work for real brands, from a café reel to ₹1 crore in sales. Before and after, in plain numbers.</p><ul class="ba"><li><span>Organic views (Brew Room)</span><b>500</b><i>→</i><b class="a">6,000+</b></li><li><span>Daily retail closures</span><b>base</b><i>→</i><b class="a">+50% (~₹1.5 lakh/day)</b></li><li><span>Festive net profit</span><b>base</b><i>→</i><b class="a">+106%</b></li></ul><div class="kpis"><b>₹5 lakh from hampers</b><b>₹1 crore in 4 months</b><b>100+ brands styled</b></div><div class="acts"><a class="btn " href="marketing.html">Case studies →</a><a class="btn ghost" href="creative.html">Creative work</a></div></template><template id="t-tv"><span class="eb">Featured Case Study</span><h2>Now showing</h2><p class="lede">Flip channels to preview a project.</p><div class="chs" role="tablist"><button role="tab" data-ch="1" aria-selected="true">CH 01</button><button role="tab" data-ch="2" aria-selected="false">CH 02</button></div><div id="tvbody"></div><p class="fn">*Simulated dataset.</p></template><template id="t-radio"><span class="eb">About &amp; Contact</span><h2>Tune in to how I work.</h2><p class="lede">Turn the knob for three short notes. Then say hello.</p><div class="tune"><button class="kb" id="dknob" aria-label="Tune: next note"><svg viewBox="0 0 60 60" width="60" height="60"><circle cx="30" cy="30" r="26" fill="#B8925A" stroke="#2B1E24" stroke-width="2"/><g id="dk"><circle cx="30" cy="30" r="18" fill="#FDFBF9" stroke="#2B1E24" stroke-width="2"/><line x1="30" y1="30" x2="30" y2="15" stroke="#2B1E24" stroke-width="3" stroke-linecap="round"/></g></svg></button><p class="note" id="dnote" aria-live="polite"></p></div><div class="dots" id="dots"></div><div class="contact"><div class="em"><span id="em">a-amisha@outlook.com</span><button class="btn ghost" id="cp">Copy email</button></div><div class="acts"><a class="btn " href="https://www.linkedin.com/in/amisha-a-b62669198/" target="_blank" rel="noopener">LinkedIn</a><a class="btn ghost" href="https://github.com/Amizingamy/Data-Analytics-Portfolio" target="_blank" rel="noopener">GitHub</a><a class="btn ghost" href="receipts.html">Receipts →</a></div></div></template>
 <script>
 (function(){
-var pages=['data', 'marketing', 'creative', 'education', 'receipts'];
-var sel=0,lis=document.querySelectorAll('#menu li'),rows=document.querySelectorAll('#ivr a');
-function set(i){sel=(i+pages.length)%pages.length;lis.forEach(function(l,j){l.classList.toggle('sel',j===sel)});rows.forEach(function(r,j){r.classList.toggle('sel',j===sel)})}
-function go(i){set(i);setTimeout(function(){location.href=pages[sel]+'.html'},260)}
-set(0);
-rows.forEach(function(r,j){r.addEventListener('mouseenter',function(){set(j)});r.addEventListener('focus',function(){set(j)})});
-lis.forEach(function(l,j){l.addEventListener('mouseenter',function(){set(j)});l.addEventListener('click',function(){go(j)})});
-document.querySelectorAll('.key').forEach(function(k){k.addEventListener('click',function(){var n=+k.dataset.k;k.classList.add('down');setTimeout(function(){k.classList.remove('down')},160);if(n>=1&&n<=5)go(n-1);else{var p=document.getElementById('phone');p.classList.remove('ring');void p.offsetWidth;p.classList.add('ring')}})});
-document.getElementById('up').onclick=function(){set(sel-1)};document.getElementById('dn').onclick=function(){set(sel+1)};
-document.getElementById('callbtn').onclick=function(){go(sel)};document.getElementById('endbtn').onclick=function(){set(0)};
-addEventListener('keydown',function(e){if(e.metaKey||e.ctrlKey||e.altKey)return;var n=parseInt(e.key,10);
- if(n>=1&&n<=5){var k=document.querySelector('.key[data-k="'+n+'"]');k.classList.add('down');setTimeout(function(){k.classList.remove('down')},160);go(n-1)}
- else if(e.key==='ArrowDown'){e.preventDefault();set(sel+1)}else if(e.key==='ArrowUp'){e.preventDefault();set(sel-1)}});
+var NOTES=["I run the campaign, then check whether it worked.", "Good marketing is a story. Good analytics tells you if anyone believed it.", "I pick things up fast: sales, healthcare, hospitality, data. Curious by default."],CH={"1": {"tag": "CH 01", "h": "Brew Room campaign analytics", "p": "A Christmas campaign, tested properly with SQL, bootstrap and a Tableau dashboard. Dataset is simulated; the method is real.", "x": "<div class=\"kpis\"><b>+279% lift*</b><b>12 SQL queries</b><b>p = 1.1e-07</b></div><div class=\"acts\"><a class=\"btn \" href=\"data.html\">Full details \u2192</a><a class=\"btn ghost\" href=\"https://github.com/Amizingamy/Data-Analytics-Portfolio/blob/main/brew-room-campaign-analytics/analysis/campaign_lift_and_rfm.ipynb\" target=\"_blank\" rel=\"noopener\">Notebook</a></div>"}, "2": {"tag": "CH 02", "h": "Ve-Glam customer segmentation", "p": "K-means on a synthetic vegan cosmetics shop to turn customers into four marketing segments across three emirates.", "x": "<div class=\"kpis\"><b>4 segments</b><b>3 emirates</b><b>Python + JMP</b></div><div class=\"acts\"><a class=\"btn \" href=\"data.html#veglam\">Full details \u2192</a></div>"}},EMAIL='a-amisha@outlook.com';
+var body=document.body,seg=document.getElementById('seg'),ov=document.getElementById('ov'),dr=document.getElementById('dr'),drb=document.getElementById('drb'),last=null;
+function store(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){return null}}
+function setView(v,save){body.classList.toggle('list',v==='list');seg.querySelectorAll('button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.v===v)});if(save){store('view',v);try{history.replaceState(null,'',v==='list'?'#list':location.pathname)}catch(e){}}if(v==='list')closeD()}
+seg.addEventListener('click',function(e){var b=e.target.closest('button');if(b)setView(b.dataset.v,true)});
+var init=location.hash==='#list'?'list':(store('view')||(innerWidth<720?'list':'room'));setView(init==='list'?'list':'room',false);
+addEventListener('hashchange',function(){if(location.hash==='#list')setView('list',false)});
+/* drawer */
+var ni=0;function tune(){ni=(ni+1)%NOTES.length;showNote(true)}
+function showNote(spin){var n=document.getElementById('bnote'),dn=document.getElementById('dnote');var t=NOTES[ni];if(n)n.textContent=t;if(dn)dn.textContent=t;var a=ni*120+30;var k=document.getElementById('knob'),dk=document.getElementById('dk'),nd=document.getElementById('needle');if(k)k.style.transform='rotate('+a+'deg)';if(dk)dk.style.transform='rotate('+a+'deg)';if(nd)nd.setAttribute('transform','translate('+(ni*14-14)+',0)');document.querySelectorAll('#dots i').forEach(function(d,i){d.classList.toggle('on',i===ni)})}
+function openD(k,from){last=from||document.activeElement;var t=document.getElementById('t-'+k);drb.innerHTML='';drb.appendChild(t.content.cloneNode(true));
+ if(k==='tv')setCh(curCh);
+ if(k==='radio'){var d=document.getElementById('dots');NOTES.forEach(function(_,i){d.appendChild(document.createElement('i'))});showNote();document.getElementById('dknob').onclick=tune;document.getElementById('cp').onclick=copy}
+ dr.classList.add('on');ov.classList.add('on');dr.setAttribute('aria-hidden','false');dr.querySelector('.x').focus();document.querySelectorAll('.obj').forEach(function(o){o.classList.toggle('hot',o.dataset.open===k)})}
+function closeD(){dr.classList.remove('on');ov.classList.remove('on');dr.setAttribute('aria-hidden','true');document.querySelectorAll('.obj').forEach(function(o){o.classList.remove('hot')});if(last&&last.focus&&body.contains(last)){try{last.focus()}catch(e){}}}
+document.getElementById('dx').onclick=closeD;ov.onclick=closeD;
+addEventListener('keydown',function(e){if(e.key==='Escape'&&dr.classList.contains('on'))closeD();
+ if(dr.classList.contains('on')&&e.key==='Tab'){var f=dr.querySelectorAll('a,button');if(!f.length)return;var a=f[0],z=f[f.length-1];if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus()}else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus()}}});
+function copy(){var b=document.getElementById('cp');function ok(){b.textContent='Copied ✓'}function fb(){var r=document.createRange();r.selectNodeContents(document.getElementById('em'));var s=getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand('copy')&&ok()}catch(e){}b.textContent=b.textContent==='Copied ✓'?b.textContent:'Selected. Press Ctrl+C'}
+ if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(EMAIL).then(ok,fb)}else fb()}
+/* TV */
+var curCh=1;function setCh(n,fromScene){curCh=n;var c=CH[n];
+ document.getElementById('tv1').textContent=c.tag+' · ON AIR';document.getElementById('tv2').textContent=n===1?'Brew Room':'Ve-Glam';document.getElementById('tv3').textContent=n===1?'Did the campaign work?':'Who buys what?';document.getElementById('tv4').textContent=n===1?'+279% lift*':'4 segments';
+ document.getElementById('ch1').classList.toggle('on',n===1);document.getElementById('ch2').classList.toggle('on',n===2);
+ var tb=document.getElementById('tvbody');if(tb){tb.innerHTML='<h2>'+c.h+'</h2><p class="lede">'+c.p+'</p>'+c.x;document.querySelectorAll('.chs button').forEach(function(b){b.setAttribute('aria-selected',+b.dataset.ch===n)});document.querySelector('#drb .eb').textContent='Featured Case Study · '+c.tag}}
+document.getElementById('ch1').classList.add('on');
+drb.addEventListener('click',function(e){var b=e.target.closest('.chs button');if(b)setCh(+b.dataset.ch)});
+function act(el,fn){el.addEventListener('click',fn);el.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();fn(e)}})}
+document.querySelectorAll('.obj').forEach(function(o){act(o,function(){openD(o.dataset.open,o)})});
+['ch1','ch2'].forEach(function(id,i){act(document.getElementById(id),function(e){e.stopPropagation();setCh(i+1)})});
+act(document.getElementById('knobhit'),function(e){e.stopPropagation();tune()});
+document.getElementById('knobhit').addEventListener('mousedown',function(e){e.stopPropagation()});
 })();
 </script></body></html>
