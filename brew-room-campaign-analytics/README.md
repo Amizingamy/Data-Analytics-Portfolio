@@ -4,7 +4,7 @@ I ran the Christmas campaign at The Brew Room, a café in Mylapore, Chennai. Thi
 
 ## About the data (please read)
 
-The real sales data belongs to the business and is confidential, so it is not here. The data in this project is **simulated**.
+The real sales data belongs to the business and is confidential, so it is not here. The data in this project is **simulated**. The real campaign ran at Christmas 2022; the calendar dates in the simulated files are placeholders.
 
 I built it around the few real figures I am free to share:
 
