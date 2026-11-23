@@ -7,10 +7,9 @@ function $$(s,r){return Array.prototype.slice.call((r||document).querySelectorAl
 var PAL={H:'#2A1618',S:'#EDBB9C',R:'#D9281C',G:'#C9973D',P:'#F4A3A3',M:'#B01E14',B:'#3B2A5C',y:'#FFD84D'};
 function svg(rows,n,sc){var w=n||Math.max.apply(null,rows.map(function(r){return r.length})),o='<svg viewBox="0 0 '+w+' '+rows.length+'" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">';rows.forEach(function(r,y){for(var x=0;x<r.length;x++){var c=PAL[r[x]];if(c)o+='<rect x="'+x+'" y="'+y+'" width="1.02" height="1.02" fill="'+c+'"/>'}});return o+'</svg>'}
 var GIRL=['................','.....HHHHHH.....','....HHHHHHHH....','...HHHHHHHHHH...','...HHSSSSSSHH...','...HHSSSSSSHH...','...HHSHSSHSHH...','...GHSSSSSSHG...','...HHPSMMSPHH...','...HHHSSSSHHH...','...HHHHSSHHHH...','....HHRRRRHH....','...HRRRRRRRRH...','..SRRRRRRRRRRS..','..SRRRRRRRRRRS..','...RRRRRRRRRR...','...RRRRRRRRRR...','....BBBBBBBB....','....BBB..BBB....','....BBB..BBB....'];
-$('#hero').innerHTML=svg(GIRL,16);
 var GIFT=['..R..R..','...RR...','yyyRRyyy','yyyRRyyy','RRRRRRRR','yyyRRyyy','yyyRRyyy','yyyRRyyy'];
-function render(){var n=0;ORDER.forEach(function(k){var o=!!done[k],r=$('#rw-'+k);if(o)n++;r.classList.toggle('locked',!o);r.classList.toggle('open',o);$('.st',r).textContent=o?'UNLOCKED':'LOCKED';$('.node[data-n='+k+']').classList.toggle('done',o)});
-$$('.stars i').forEach(function(i,x){i.classList.toggle('on',x<n)});$('#pc').textContent=n+' / 5 LEVELS';
+function render(){var n=0;ORDER.forEach(function(k){var o=!!done[k],r=$('#rw-'+k);if(o)n++;r.classList.toggle('locked',!o);r.classList.toggle('open',o);$('.st',r).textContent=o?'UNLOCKED':'LOCKED';});
+$('#hp i').style.width=(n*20)+'%';$('#xp').textContent=n;
 var w=$('#win');w.classList.toggle('locked',n<5);$('#wc').hidden=n<5;$('#wh').textContent=n<5?'FINAL: LOCKED':'YOU WIN!';$('#wp').textContent=n<5?'Clear all five levels to open the last screen.':'Thanks for playing. If you liked this, imagine what I could build for your brand. Let\'s talk.'}
 function win(k,quiet){var was=done[k];done[k]=1;sv(JSON.stringify(done));render();if(!quiet||!was){var r=$('#rw-'+k);r.scrollIntoView({block:'center',behavior:'smooth'})}}
 function clr(k){(T[k]||[]).forEach(function(t){clearInterval(t);clearTimeout(t)});T[k]=[];if(T[k+'kd']){document.removeEventListener('keydown',T[k+'kd']);T[k+'kd']=null}}
@@ -34,16 +33,16 @@ var rev=str.split('').reverse().join(''),m=W.filter(function(w){return(w===str||
 if(m){found[m]=1;cells.forEach(function(x){x.classList.add('hit')});$('#w-'+m,s).classList.add('f');if(Object.keys(found).length===5){setTimeout(function(){msg(s,'LEVEL CLEAR!','Loot unlocked below.');win(k)},500)}}}
 first=null}}
 var PA=['................','..cccc.....uu...','...cc......uu...','......rr....ll..','.....rrrr..llll.','....rrrrrr.llll.','....hhhhhh..tt..','....hwhhwh..tt..','....hhddhh..tt..','....hhddhh.f..f.','gggggggggggggggg','gggggggggggggggg'];
-function spot(s,k){var P={c:'#fff',u:'#FFD84D',r:'#D9281C',l:'#2E9A4C',h:'#E8C48F',w:'#6EC3F0',d:'#8B5A3C',t:'#8B5A3C',f:'#F4A3A3',g:'#5DB85A',y:'#FFD84D','.':'#8FD3F4'};
+function spot(s,k){var P={c:'#D9C8FF',u:'#FFE45E',r:'#FF2E93',l:'#2E9A4C',h:'#E8C48F',w:'#5CC8FF',d:'#8B5A3C',t:'#8B5A3C',f:'#F4A3A3',g:'#2EE59D',y:'#FFD84D','.':'#1E1B4B'};
 var B=PA.map(function(r){return r.split('')});B[2][3]='.';B[2][4]='.';B[7][8]='y';B[9][14]='.';
 var D=[[2,3],[7,8],[9,14]],hit={};s.className='stage';
 function scene(rows,iv){var o='<div class="scn" '+(iv?'data-b="1"':'')+'>';rows.forEach(function(r,y){r.forEach(function(c,x){o+='<i data-x="'+x+'" data-y="'+y+'" style="background:'+P[c]+'"></i>'})});return o+'</div>'}
-s.innerHTML='<div style="width:100%"><div class="sp">'+scene(PA.map(function(r){return r.split('')}))+scene(B,1)+'</div><p id="sf" style="margin:10px 0 0">Found 0 of 3</p></div>';
+s.innerHTML='<div style="width:100%"><div class="spp">'+scene(PA.map(function(r){return r.split('')}))+scene(B,1)+'</div><p id="sf" style="margin:10px 0 0">Found 0 of 3</p></div>';
 s.onclick=function(e){var c=e.target.closest('.scn i');if(!c)return;var x=+c.dataset.x,y=+c.dataset.y;D.forEach(function(d,i){if(!hit[i]&&Math.abs(d[0]-y)<=1&&Math.abs(d[1]-x)<=1){hit[i]=1;$$('.scn i[data-x="'+d[1]+'"][data-y="'+d[0]+'"]',s).forEach(function(q){q.classList.add('found')})}});
 var n=Object.keys(hit).length;$('#sf',s).textContent='Found '+n+' of 3';if(n===3)setTimeout(function(){msg(s,'LEVEL CLEAR!','Loot unlocked below.');win(k)},600)}}
 var MZ=['###########','#S..#.....#','#.#.#.###.#','#.#...#...#','#.#####.#.#','#.....#.#.#','#####.#.#.#','#.....#...#','#.#######E#'];
 function maze(s,k){var py=1,px=1;s.className='stage';
-function draw(){var o='<div><div class="mz" style="grid-template-columns:repeat(11,1fr)" role="img" aria-label="Maze">';MZ.forEach(function(r,y){for(var x=0;x<11;x++){var c=r[x],bg=c==='#'?'#2A1618':'#FFF6E5';if(y===py&&x===px)bg='#D9281C';else if(c==='E')bg='#FFD84D';o+='<i style="background:'+bg+'"></i>'}});
+function draw(){var o='<div><div class="mz" style="grid-template-columns:repeat(11,1fr)" role="img" aria-label="Maze">';MZ.forEach(function(r,y){for(var x=0;x<11;x++){var c=r[x],bg=c==='#'?'#6A6BFF':'#14123A';if(y===py&&x===px)bg='#2EE59D';else if(c==='E')bg='#FFE45E';o+='<i style="background:'+bg+'"></i>'}});
 o+='</div><div class="dpad"><span></span><button data-d="u" aria-label="Up">↑</button><span></span><button data-d="l" aria-label="Left">←</button><button data-d="d" aria-label="Down">↓</button><button data-d="r" aria-label="Right">→</button></div></div>';s.innerHTML=o}
 function mv(d){var dy=d==='u'?-1:d==='d'?1:0,dx=d==='l'?-1:d==='r'?1:0,ny=py+dy,nx=px+dx;if(MZ[ny]&&MZ[ny][nx]&&MZ[ny][nx]!=='#'){py=ny;px=nx;draw();if(MZ[py][px]==='E'){clr(k);setTimeout(function(){msg(s,'LEVEL CLEAR!','Loot unlocked below.');win(k)},300)}}}
 draw();s.onclick=function(e){var b=e.target.closest('.dpad button');if(b)mv(b.dataset.d)};
