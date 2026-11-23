@@ -1,4 +1,4 @@
-:root{--bg:#FDFBF9;--ink:#2B1E24;--ink2:#5f4d55;--muted:#9a8890;--line:#eadfd9;--pink:#D88C9A;--pink2:#9e4d60;--blush:#F7E6EA;--lilac:#F3E9D8;--sky:#EFE3E6;--card:#fff;--grey:#EBDADD;--code:#FBF3F1;--brass:#B8925A;--font:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',sans-serif;--serif:'Playfair Display',Georgia,serif;--mono:'JetBrains Mono',ui-monospace,Menlo,monospace;--r:22px;--sh:0 1px 2px rgba(43,30,36,.05),0 14px 34px rgba(184,146,90,.10);color-scheme:light}
+:root{--bg:#F6B6C3;--ink:#2A1618;--ink2:#5f4d55;--muted:#9a8890;--line:#eadfd9;--pink:#D9281C;--pink2:#B01E14;--blush:#F9C6D0;--lilac:#F8E3D3;--sky:#C8DDF2;--card:#fff;--grey:#EBDADD;--code:#FBF3F1;--brass:#D9281C;--font:'DM Sans',system-ui,-apple-system,'Segoe UI',sans-serif;--serif:'DM Serif Display',Georgia,serif;--mono:'JetBrains Mono',ui-monospace,Menlo,monospace;--r:22px;--sh:0 1px 2px rgba(43,30,36,.05),0 14px 34px rgba(184,146,90,.10);color-scheme:light}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.65 var(--font);-webkit-font-smoothing:antialiased}
@@ -6,7 +6,7 @@ a{color:inherit}
 img{max-width:100%}
 h1,h2,h3{margin:0;letter-spacing:-.03em;line-height:1.1;text-wrap:balance}
 p{margin:0}
-.wrap{max-width:1040px;margin:0 auto;padding:0 clamp(16px,4vw,32px)}
+.wrap{max-width:1100px;margin:clamp(8px,2vw,24px) auto;background:#FCF3E8;border-radius:32px;padding:0 clamp(16px,4vw,40px) 32px}.pills a.fun{color:#D9281C;font-weight:700}
 /* header */
 .top{display:flex;align-items:center;justify-content:space-between;gap:12px 20px;padding:20px 0;flex-wrap:wrap}
 .logo{font-weight:800;font-size:1.3rem;text-decoration:none;letter-spacing:-.04em}.logo span{color:var(--pink)}
@@ -19,7 +19,7 @@ p{margin:0}
 .pagehead{padding:clamp(28px,6vw,64px) 0 clamp(20px,4vw,36px);display:flex;flex-direction:column;gap:16px}
 .eyebrow{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2)}
 .eyebrow b{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--pink);color:#fff;font-size:.85rem;letter-spacing:0}
-h1.big{font-size:clamp(2.3rem,6.4vw,4.2rem);font-weight:800;max-width:16ch}
+h1.big{font-family:var(--serif);color:#D9281C;font-weight:400;font-size:clamp(2.3rem,6.4vw,4.2rem);max-width:16ch}
 .sub{font-size:clamp(1.02rem,2.2vw,1.2rem);color:var(--ink2);max-width:56ch}
 h2{font-size:clamp(1.5rem,3.6vw,2.1rem);font-weight:800;margin:clamp(40px,7vw,72px) 0 8px}
 h3{font-size:1.1rem;font-weight:700;letter-spacing:-.02em}
@@ -95,7 +95,7 @@ footer.foot{padding:20px 0 40px;color:var(--muted);font-size:.84rem;display:flex
 
 /* Victorian skin */
 h1,h2,h3,.logo{font-family:var(--serif);font-weight:700;letter-spacing:-.01em}
-h1.big{font-weight:700;max-width:18ch}
+h1.big{font-family:var(--serif);color:#D9281C;font-weight:400;font-weight:700;max-width:18ch}
 .logo{font-size:1.3rem;display:flex;flex-direction:column;line-height:1.1;text-decoration:none}.logo span{color:var(--ink);font:500 .66rem/1.4 var(--mono);letter-spacing:.06em;text-transform:uppercase;opacity:.65}
 .card,.role,.stat,.proof,.pager a,.tw{border:1.5px solid rgba(184,146,90,.55)}
 .shot{border:1.5px solid rgba(184,146,90,.55)}
