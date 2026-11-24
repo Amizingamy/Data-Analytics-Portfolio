@@ -4,6 +4,8 @@ I am a marketing professional (MBA, Global Marketing Management) moving into dat
 
 Based in Chennai, India. Email: a-amisha@outlook.com
 
+**Portfolio site:** [amizingamy.github.io/Data-Analytics-Portfolio](https://amizingamy.github.io/Data-Analytics-Portfolio/) · **Resume:** [PDF](docs/Amisha_Agarwal_Resume.pdf)
+
 ## Projects
 
 | Project | What it shows | Tools |
