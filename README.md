@@ -10,6 +10,7 @@ Based in Chennai, India. Email: a-amisha@outlook.com
 |---|---|---|
 | [Live Earthquake Tracker](earthquake-tracker/) ([live app](https://data-analytics-portfolio-6im4jotwqda9nprm4dutwd.streamlit.app/)) | Pulls a live data feed, cleans it and shows it on an interactive map with filters | Python, pandas, Plotly, Streamlit |
 | [Brew Room Christmas Campaign: Analytics](brew-room-campaign-analytics/) | A real campaign turned into a case study: revenue lift, product mix, Instagram effect and loyalty behaviour, using a simulated dataset | SQL, Python (pandas, scipy), notebook analysis |
+| [Green Goddesses at the Duchess Utsav: Instagram campaign](green-goddesses-duchess-utsav/) | A real Instagram campaign analysed with Instagram Insights: before and after, paid vs organic attribution, format performance and audience | Instagram Insights, Python (matplotlib), CSV |
 
 **Live dashboard:** [Brew Room Christmas Campaign on Tableau Public](https://public.tableau.com/views/BrewRoomChristmasCampaign/Dashboard1).
 
@@ -29,4 +30,4 @@ Based in Chennai, India. Email: a-amisha@outlook.com
 
 ## A note on the data
 
-Where a project uses business data that is confidential, I use a simulated dataset built around the figures I am allowed to share, and each project's README says exactly what is real and what is simulated.
+Where a project uses business data that is confidential, I use a simulated dataset built around the figures I am allowed to share. The Green Goddesses case study uses real Instagram Insights figures. Each project's README says exactly what is real and what is simulated.
