@@ -10,7 +10,7 @@ var GIRL=['................','.....HHHHHH.....','....HHHHHHHH....','...HHHHHHHHH
 var GIFT=['..R..R..','...RR...','yyyRRyyy','yyyRRyyy','RRRRRRRR','yyyRRyyy','yyyRRyyy','yyyRRyyy'];
 function render(){var n=0;ORDER.forEach(function(k){var o=!!done[k],r=$('#rw-'+k);if(o)n++;r.classList.toggle('locked',!o);r.classList.toggle('open',o);$('.st',r).textContent=o?'UNLOCKED':'LOCKED';});
 $('#hp i').style.width=(n*20)+'%';$('#xp').textContent=n;
-var w=$('#win');w.classList.toggle('locked',n<5);$('#wc').hidden=n<5;$('#wh').textContent=n<5?'FINAL: LOCKED':'YOU WIN!';$('#wp').textContent=n<5?'Clear all five levels to open the last screen.':'Thanks for playing. If you liked this, imagine what I could build for your brand. Let\'s talk.'}
+var w=$('#win');$('#wc').hidden=n<5;$('#wp').hidden=n>=5}
 function win(k,quiet){var was=done[k];done[k]=1;sv(JSON.stringify(done));render();if(!quiet||!was){var r=$('#rw-'+k);r.scrollIntoView({block:'center',behavior:'smooth'})}}
 function clr(k){(T[k]||[]).forEach(function(t){clearInterval(t);clearTimeout(t)});T[k]=[];if(T[k+'kd']){document.removeEventListener('keydown',T[k+'kd']);T[k+'kd']=null}}
 function msg(s,a,b){s.className='stage';s.innerHTML='<div><p class="big">'+a+'</p><p>'+b+'</p></div>'}
@@ -53,6 +53,6 @@ cs.forEach(function(c){var b=document.createElement('button');b.textContent='?';
 if(first.i===c[1]){first.b.classList.replace('up','ok');b.classList.replace('up','ok');first=null;m++;if(m===4)setTimeout(function(){msg(s,'LEVEL CLEAR!','Loot unlocked below.');win(k)},500)}
 else{lock=true;var f=first;first=null;T[k].push(setTimeout(function(){[f.b,b].forEach(function(x){x.classList.remove('up');x.textContent='?'});lock=false},900))}};g.appendChild(b)});s.innerHTML='';s.appendChild(g)}
 document.addEventListener('click',function(e){var a=e.target.closest('[data-start]'),b=e.target.closest('[data-skip]');if(a)start(a.dataset.start);if(b){var k=b.dataset.skip;clr(k);msg($('#st-'+k),'SKIPPED','Loot unlocked below.');win(k)}});
-$('#reset').onclick=function(){done={};sv('{}');ORDER.forEach(function(k){clr(k);var s=$('#st-'+k);s.className='stage';s.innerHTML='';s.onclick=null});render();window.scrollTo({top:0,behavior:'smooth'})};
+$$('#reset,.rs').forEach(function(x){x.onclick=function(){done={};sv('{}');ORDER.forEach(function(k){clr(k);var s=$('#st-'+k);s.className='stage';s.innerHTML='';s.onclick=null});render();window.scrollTo({top:0,behavior:'smooth'})}});
 ORDER.forEach(function(k){$('#st-'+k).innerHTML='<p>Press Start to play</p>'});render();
 })();
